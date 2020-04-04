@@ -1,0 +1,18 @@
+Basic Requirements:
+    perform quality control and refine the data
+    in case of any inconsistencies and/or duplicates found, produce new file with refined data to be used in the subsequent analysis
+    perform the initial descriptive analysis of the data
+    Output the total number of records in the data file
+    Output the range of dates represented in the data (the earliest and the latest revision date)
+    Output a table with the total number of records for each identifier type
+
+Additional Requirements:
+    Easy: Output a table with the percentage of records for each identifier type
+    Easy: Calculate an average number of days since citation appeared on Wikipedia, as on March 1, 2018
+    Easy: Output a table with the number of citations from arXiv by the year of their appearance
+    Medium: Find an average number of citations per page
+    Medium: Find first ten pages citing the largest number of sources
+    Medium: Output a table with the number of citations from Zenodo
+    Hard: Output a table with the number and percentage of citations appearing on Wikipedia by the number of years since their appearance
+    Hard: Find first ten most highly cited sources
+    Hard: Analyse and optimise the performance of different steps of your analysis
