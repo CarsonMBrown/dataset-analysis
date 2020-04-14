@@ -11,7 +11,7 @@ def cleanInvalidLines(filename):
     filepath = "../Data/" + filename + ".tsv"
     if fileValid(filepath) :
         print("Cleaning Invalid Lines From: " + filepath)
-        file = open(filepath, "r", errors='ignore')
+        file = open(filepath, "r", encoding='utf8')
         checkTabs(file)
 
 def checkTabs(file):

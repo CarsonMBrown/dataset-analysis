@@ -14,11 +14,11 @@ def checkTypes(data):
     for i in range(0,6) :
         if i == 0 or i == 2 :
             if data.dtypes[i] != "int64" :
-                print("Column \"" + movies_df.columns[i] + "\" Contains Invalid Type")
+                print("Column \"" + data.columns[i] + "\" Contains Invalid Type")
                 allValid = False
         else :
             if data.dtypes[i] != "object" :
-                print("Column \"" + movies_df.columns[i] + "\" Contains Invalid Type")
+                print("Column \"" + data.columns[i] + "\" Contains Invalid Type")
                 allValid = False
     if allValid :
         print("All Data Is Of The Correct Type")
