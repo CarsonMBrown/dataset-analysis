@@ -21,7 +21,7 @@ def checkTabs(file):
         line = line.strip()
         numTabs = line.count("\t")
         if numTabs != 5 :
-            print(count)
+            print("\tInvalid Number Of Tabs On Line: ", count)
         count = count + 1
 
 if __name__ == '__main__':
