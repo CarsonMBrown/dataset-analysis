@@ -1,0 +1,66 @@
+ENGLISH:
+Number of rows, number of columns: (3794695, 6)
+Sorting date of records...
+
+Earliest date (ns, UTC): 2001-12-06 15:08:27+00:00
+Earliest date: 2001-12-06
+Latest date (ns, UTC): 2018-03-02 06:32:39+00:00
+Latest date: 2018-03-02
+
+isbn     1740812
+doi      1211807
+pmid      609848
+pmc       181240
+arxiv      50988
+Name: type, dtype: int64
+
+
+CHINESE:
+Number of rows, number of columns: (1648868, 6)
+Sorting date of records...
+
+Earliest date (ns, UTC): 2001-12-02 17:08:33+00:00
+Earliest date: 2001-12-02
+Latest date (ns, UTC): 2018-03-02 01:26:31+00:00
+Latest date: 2018-03-02
+
+isbn     1517103
+doi       112299
+pmid       11925
+arxiv       5203
+pmc         2338
+Name: type, dtype: int64
+
+
+GERMAN:
+Number of rows, number of columns: (1648868, 6)
+Sorting date of records...
+
+Earliest date (ns, UTC): 2001-12-02 17:08:33+00:00
+Earliest date: 2001-12-02
+Latest date (ns, UTC): 2018-03-02 01:26:31+00:00
+Latest date: 2018-03-02
+
+isbn     1517103
+doi       112299
+pmid       11925
+arxiv       5203
+pmc         2338
+Name: type, dtype: int64
+
+
+UKRANIAN:
+Number of rows, number of columns: (225054, 6)
+Sorting date of records...
+
+Earliest date (ns, UTC): 2004-04-14 11:49:23+00:00
+Earliest date: 2004-04-14
+Latest date (ns, UTC): 2018-03-01 19:25:09+00:00
+Latest date: 2018-03-01
+
+isbn     140596
+doi       71246
+pmid       9304
+arxiv      2223
+pmc        1685
+Name: type, dtype: int64
