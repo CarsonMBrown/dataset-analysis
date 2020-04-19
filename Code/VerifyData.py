@@ -8,6 +8,7 @@ def main():
         if data is not None :
             checkTypes(data)
             removeDuplicates(data)
+            checkRangesValid(data)
 
 def checkTypes(data):
     allValid = True
@@ -22,6 +23,13 @@ def checkTypes(data):
                 allValid = False
     if allValid :
         print("All Data Is Of The Correct Type")
+
+# Can be expanded to each row with a new list of valid types or a new range
+def checkRangesValid(data):
+    validTypes = ["doi", "isbn", "pmid", "pmc", "arxiv"]
+    for x in data["type"]:
+        if x not in validTypes:
+            print(x)
 
 def removeDuplicates(data):
     newRows = data.drop_duplicates().shape[0]
