@@ -33,10 +33,8 @@ def removeDuplicates(data):
 
 def removeNullData(data):
     numRows = data.shape[0]
-    print(data)
     data.dropna(inplace=True)
     print(str(numRows - data.shape[0]) + " Lines with missing data removed")
-    print(data)
 
 
 # Can be expanded to each row with a new list of valid types or a new range
