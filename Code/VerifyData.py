@@ -6,8 +6,9 @@ def main():
     for arg in sys.argv[1:] :
         data = readFile(arg)
         if data is not None :
-            checkTypes(data)
             removeDuplicates(data)
+            removeNullData(data)
+            checkTypes(data)
             checkRangesValid(data)
 
 def checkTypes(data):
@@ -24,6 +25,20 @@ def checkTypes(data):
     if allValid :
         print("All Data Is Of The Correct Type")
 
+def removeDuplicates(data):
+    newRows = data.drop_duplicates().shape[0]
+    dataRows = data.shape[0]
+    print("There are " + str(dataRows - newRows) + " Duplicate Rows in the Data")
+
+
+def removeNullData(data):
+    numRows = data.shape[0]
+    print(data)
+    data.dropna(inplace=True)
+    print(str(numRows - data.shape[0]) + " Lines with missing data removed")
+    print(data)
+
+
 # Can be expanded to each row with a new list of valid types or a new range
 def checkRangesValid(data):
     validTypes = ["doi", "isbn", "pmid", "pmc", "arxiv"]
@@ -31,10 +46,6 @@ def checkRangesValid(data):
         if x not in validTypes:
             print(x)
 
-def removeDuplicates(data):
-    newRows = data.drop_duplicates().shape[0]
-    dataRows = data.shape[0]
-    print("There are " + str(dataRows - newRows) + " Duplicate Rows in the Data")
 
 if __name__ == '__main__':
     main()
