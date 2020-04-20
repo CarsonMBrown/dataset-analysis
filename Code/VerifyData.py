@@ -11,6 +11,19 @@ def main():
             checkTypes(data)
             checkRangesValid(data)
 
+
+def removeDuplicates(data):
+    newRows = data.drop_duplicates().shape[0]
+    dataRows = data.shape[0]
+    print("There are " + str(dataRows - newRows) + " Duplicate Rows in the Data")
+
+
+def removeNullData(data):
+    numRows = data.shape[0]
+    data.dropna(inplace=True)
+    print(str(numRows - data.shape[0]) + " Lines with missing data removed")
+
+
 def checkTypes(data):
     allValid = True
     for i in range(0,6) :
@@ -25,26 +38,18 @@ def checkTypes(data):
     if allValid :
         print("All Data Is Of The Correct Type")
 
-def removeDuplicates(data):
-    newRows = data.drop_duplicates().shape[0]
-    dataRows = data.shape[0]
-    print("There are " + str(dataRows - newRows) + " Duplicate Rows in the Data")
-
-
-def removeNullData(data):
-    numRows = data.shape[0]
-    data.dropna(inplace=True)
-    print(str(numRows - data.shape[0]) + " Lines with missing data removed")
 
 
 # Can be expanded to each row with a new list of valid types or a new range
 def checkRangesValid(data):
-    line = 1
-    validTypes = ["doi", "isbn", "pmid", "pmc", "arxiv"]
-    for x in data["type"]:
-        if x not in validTypes:
-            print("Invalid data on line " + str(line) + ": " + x)
-        line = line + 1;
+    invalidData = data.query("type not in [\"doi\", \"isbn\", \"pmid\", \"pmc\", \"arxiv\"]")
+    if invalidData.shape[0] != 0 :
+        print("Invalid Type(s) Found, Removing Lines:")
+        print(invalidData)
+    else :
+        print("No Invalid Data Found")
+    data = data.query("type in [\"doi\", \"isbn\", \"pmid\", \"pmc\", \"arxiv\"]")
+
 
 
 
