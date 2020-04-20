@@ -39,10 +39,13 @@ def removeNullData(data):
 
 # Can be expanded to each row with a new list of valid types or a new range
 def checkRangesValid(data):
+    line = 1
     validTypes = ["doi", "isbn", "pmid", "pmc", "arxiv"]
     for x in data["type"]:
         if x not in validTypes:
-            print(x)
+            print("Invalid data on line " + str(line) + ": " + x)
+        line = line + 1;
+
 
 
 if __name__ == '__main__':
