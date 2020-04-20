@@ -6,7 +6,14 @@ def main():
     for arg in sys.argv[1:] :
         data = readFile(arg)
         if data is not None :
+            arxivCitations(data)
             avgCitatations(data)
+
+
+def arxivCitations(data):
+    arxivCitations = data.query("type == \"arxiv\"")
+    count = arxivCitations.shape[0]
+    print("Number Of ArXiv Citations: " + str(count))
 
 
 def avgCitatations(data):
