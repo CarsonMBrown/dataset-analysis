@@ -10,12 +10,13 @@ def main():
             totalRecords(data)
             rangeOfDate(data)
             recordsByType(data)
+            recordsByPercentage(data) # Easy 1
 
 def indentDataFrame(toIndent):
     return "\t" + toIndent.to_string().replace("\n", "\n\t") + "\n"
 
 def totalRecords(data):
-    print("Number of rows:", data.shape[0], "\n")
+    print("Number of records:", data.shape[0], "\n")
     
 def rangeOfDate(data):
     date_data = pd.to_datetime(data['timestamp'])
@@ -28,11 +29,17 @@ def rangeOfDate(data):
     print("Latest date:", date_data.iloc[-1].date(), "\n")
 
 def recordsByType(data):
-    data_type = data['type']
+    counts = data['type'].value_counts()
     # use of value_counts that has been optimised for object type
-    print(data_type.value_counts())
+    table = pd.DataFrame({'Records count': counts})
+    print(table, "\n")
 
 
+def recordsByPercentage(data):
+    percent = data['type'].value_counts(normalize = True).mul(100).round(1).astype(str)
+    table = pd.DataFrame({'percentage %': percent})
+    print(table, "\n")
+    
 
 if __name__ == '__main__':
     main()
