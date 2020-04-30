@@ -6,6 +6,10 @@ def fileValid(filepath):
     return valid
 
 def readFile(filename):
+    """
+    Opens a file as a pandas dataframe and checks if it is a valid file.
+    Returns either the dataframe or None.
+    """
     filepath = "../Data/" + filename + ".tsv"
     if fileValid(filepath) :
         print("Reading From: " + filepath)

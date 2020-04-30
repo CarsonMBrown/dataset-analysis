@@ -21,7 +21,6 @@ def arxivCitations(data):
     print("Number Of ArXiv Citations By Year: ")
     print(indentDataFrame(yearCounts))
 
-
 def avgCitatations(data):
     valueCount = data["page_id"].value_counts()
     mean = valueCount.mean()

@@ -8,6 +8,9 @@ def main():
         cleanInvalidLines(arg)
 
 def cleanInvalidLines(filename):
+    """
+    Removes all the invalid lines from the data.
+    """
     filepath = "../Data/" + filename + ".tsv"
     if fileValid(filepath) :
         print("Cleaning Invalid Lines From: " + filepath)
@@ -15,6 +18,9 @@ def cleanInvalidLines(filename):
         checkTabs(file)
 
 def checkTabs(file):
+    """
+    Checks for lines that don't contain the correct number of tabs.
+    """
     print("Checking Tabs...")
     count = 0
     for line in file.readlines():
