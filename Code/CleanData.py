@@ -8,9 +8,25 @@ def main():
     for arg in sys.argv[1:]:
         data = readFile(arg)
         if data is not None:
-            checkNumberOfCols(data)
-            handleEmptyValues(data)
-            removeDuplicates(data)
+            checkData(data)
+            refineData(data)
+
+
+def checkData(data):
+    x = checkNumberOfCols(data)
+    x = x and checkColNames(data)
+    if not x:
+        sys.exit(1)
+
+
+def checkColNames(data):
+    col_names = ['page_id', 'page_title', 'rev_id', 'timestamp', 'type', 'id']
+    x = True
+    for name in col_names:
+        if not (name in data.columns):
+            print(name + " column is not in table")
+            x = False
+    return x
 
 
 def checkNumberOfCols(data):
@@ -23,6 +39,11 @@ def checkNumberOfCols(data):
     return False
 
 
+def refineData(data):
+    handleEmptyValues(data)
+    removeDuplicates(data)
+
+
 def handleEmptyValues(data):
     # Get columns with empty cells
     num_of_empty_in_col = data.isnull().sum()
@@ -30,14 +51,14 @@ def handleEmptyValues(data):
     if not num_of_empty_in_col.empty:
         print("The following columns have empty fields")
         print(num_of_empty_in_col)
-        for key in num_of_empty_in_col.keys():
-            if data[key].dtype == 'object':
-                data[key].fillna('*')
-            if data[key].dtype == 'int64':
-                data[key].dropna()
+        data = data.dropna()
+
 
 def removeDuplicates(data):
-    data.drop_duplicates(data)
+    data_rows = data.shape[0]
+    data = data.drop_duplicates()
+    print("There are " + str(data_rows - data.shape[0]) + " Duplicate Rows in the Data")
+
 
 if __name__ == '__main__':
     main()
