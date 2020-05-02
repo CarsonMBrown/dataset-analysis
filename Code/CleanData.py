@@ -15,6 +15,7 @@ def main():
 def checkData(data):
     x = checkNumberOfCols(data)
     x = x and checkColNames(data)
+    x = x and checkTypes(data)
     if not x:
         sys.exit(1)
 
@@ -38,6 +39,32 @@ def checkNumberOfCols(data):
     print("Invalid number of columns")
     return False
 
+
+def checkTypes(data):
+    x = True
+    col_names = ['page_id', 'page_title', 'rev_id', 'timestamp', 'type', 'id']
+    possible_values_for_type = ["doi", "isbn", "pmid", "pmc", "arxiv"]
+    for name in col_names:
+        if name == 'page_id' or name == 'rev_id':
+            if data.dtypes[name] != "int64":
+                print("Column \"" + name + "\" contains Invalid Type")
+                x = False
+        elif name == 'timestamp':
+            try:
+                data[name] = pd.to_datetime(data[name])
+            except TypeError:
+                x = False
+                print("Column \"" + name + "\" contains Invalid Type")
+        elif name == 'type':
+            for value in data[name].unique():
+                if not(value in possible_values_for_type):
+                    x = False
+                    print("Column \"" + name + "\" contains Invalid Value")
+        else:
+            if data.dtypes[name] != "object":
+                print("Column \"" + name + "\" contains Invalid Type")
+                x = False
+    return x
 
 def refineData(data):
     handleEmptyValues(data)
