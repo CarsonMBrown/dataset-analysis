@@ -82,7 +82,7 @@ def checkPMIDMismatch(data):
     num_rows = data.shape[0]
     rows_with_pmid = data[data.type == 'pmid']
     rows_id_not_valid = rows_with_pmid[~rows_with_pmid.id.str.match("^(\d{1,8})$")]
-    data.drop(rows_id_not_valid, inplace=True)
+    data.drop(rows_id_not_valid.index, inplace=True)
     print(str(num_rows - data.shape[0]) + " Lines with mismatched pmid removed")
 
 
@@ -90,7 +90,7 @@ def checkISBNMismatch(data):
     num_rows = data.shape[0]
     rows_with_pmid = data[data.type == 'isbn']
     rows_id_not_valid = rows_with_pmid[~rows_with_pmid.id.str.match("^(97(8|9))?\d{9}(\d|X)$")]
-    data.drop(rows_id_not_valid, inplace=True)
+    data.drop(rows_id_not_valid.index, inplace=True)
     print(str(num_rows - data.shape[0]) + " Lines with mismatched isbn removed")
 
 
