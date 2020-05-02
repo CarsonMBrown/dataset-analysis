@@ -28,7 +28,7 @@ def checkColNames(data):
             x = False
     return x
 
-
+# TODO use inbuilt .shape attribute for size
 def checkNumberOfCols(data):
     i = 0
     for key in data.keys():
@@ -43,7 +43,7 @@ def refineData(data):
     handleEmptyValues(data)
     removeDuplicates(data)
 
-
+#TODO: See removeNullData() in VerifyData and merge both approaches
 def handleEmptyValues(data):
     # Get columns with empty cells
     num_of_empty_in_col = data.isnull().sum()
@@ -53,7 +53,7 @@ def handleEmptyValues(data):
         print(num_of_empty_in_col)
         data = data.dropna()
 
-
+#TODO: See removeDuplicates() in VerifyData and merge both approaches
 def removeDuplicates(data):
     data_rows = data.shape[0]
     data = data.drop_duplicates()
