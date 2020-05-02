@@ -2,14 +2,15 @@ import sys
 import os
 from FileHelper import *
 import difflib
+import re
 
 
 def main():
     for arg in sys.argv[1:]:
         data = readFile(arg)
         if data is not None:
-            checkData(data)
             refineData(data)
+            checkData(data)
 
 
 def checkData(data):
@@ -29,7 +30,7 @@ def checkColNames(data):
             x = False
     return x
 
-# TODO use inbuilt .shape attribute for size
+
 def checkNumberOfCols(data):
     if data.keys().shape[0] == 6:
         return True
@@ -54,7 +55,7 @@ def checkTypes(data):
                 print("Column \"" + name + "\" contains Invalid Type")
         elif name == 'type':
             for value in data[name].unique():
-                if not(value in possible_values_for_type):
+                if not (value in possible_values_for_type):
                     x = False
                     print("Column \"" + name + "\" contains Invalid Value")
         else:
@@ -63,9 +64,35 @@ def checkTypes(data):
                 x = False
     return x
 
+
 def refineData(data):
+    checkTypeIdMismatch(data)
     handleEmptyValues(data)
     removeDuplicates(data)
+
+
+def checkTypeIdMismatch(data):
+    # possible_values_for_type = ["doi", "isbn", "pmid", "pmc", "arxiv"]
+    data = data.reset_index(drop=True)
+    checkPMIDMismatch(data)
+    checkISBNMismatch(data)
+
+
+def checkPMIDMismatch(data):
+    num_rows = data.shape[0]
+    rows_with_pmid = data[data.type == 'pmid']
+    rows_id_not_valid = rows_with_pmid[~rows_with_pmid.id.str.match("^(\d{1,8})$")]
+    data.drop(rows_id_not_valid, inplace=True)
+    print(str(num_rows - data.shape[0]) + " Lines with mismatched pmid removed")
+
+
+def checkISBNMismatch(data):
+    num_rows = data.shape[0]
+    rows_with_pmid = data[data.type == 'isbn']
+    rows_id_not_valid = rows_with_pmid[~rows_with_pmid.id.str.match("^(97(8|9))?\d{9}(\d|X)$")]
+    data.drop(rows_id_not_valid, inplace=True)
+    print(str(num_rows - data.shape[0]) + " Lines with mismatched isbn removed")
+
 
 def handleEmptyValues(data):
     # Get columns with empty cells
@@ -75,6 +102,7 @@ def handleEmptyValues(data):
         print("The following columns have empty fields")
         print(num_of_empty_in_col)
         data = data.dropna()
+
 
 def removeDuplicates(data):
     data_rows = data.shape[0]
