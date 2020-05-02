@@ -13,17 +13,19 @@ def main():
             recordsByPercentage(data)
             zenodoByYear(data)
 
-            
+
 def indentDataFrame(toIndent):
     return "\t" + toIndent.to_string().replace("\n", "\n\t") + "\n"
 
 
 def totalRecords(data):
+    """Basic: Outputting number of records after pre-processing"""
     print("Number of records:", data.shape[0], "\n")
-   
+
 
 def rangeOfDate(data):
-    date_data = pd.to_datetime(data['timestamp'])
+    """Basic: Outputting the range of date"""
+    date_data = pd.to_datetime(data['timestamp']) # Parse the column 'timestamp' as datatime type in Pandas
     date_data = date_data.sort_values(ascending = True)
 
     print("Earliest date (ns, UTC):", date_data.iloc[0])
@@ -32,8 +34,9 @@ def rangeOfDate(data):
     print("Latest date (ns, UTC):", date_data.iloc[-1])
     print("Latest date:", date_data.iloc[-1].date(), "\n")
 
-    
+
 def recordsByType(data):
+    """Basic: Sort records by citation type"""
     counts = data['type'].value_counts()
     # use of value_counts that has been optimised for object type
     table = counts.rename_axis('Record type').reset_index(name = 'Record count')
@@ -41,17 +44,19 @@ def recordsByType(data):
 
 
 def recordsByPercentage(data):
-    percent = data['type'].value_counts(normalize = True).mul(100).round(1).astype(str)
+    """Easy: Outputting percentage of each record type"""
+    percent = data['type'].value_counts(normalize = True).mul(100).round(1).astype(str) # normalize parameter calculates percentage as a decimal number
     table = percent.rename_axis('Record type').reset_index(name = 'Percentage %')
     print(table, "\n")
-    
+
 
 def zenodoByYear(data):
-    zenodo_data = data[data['id'].str.contains('zenodo', case = False)]
+    """Medium: Outputting citations referencing Zenodo by year"""
+    zenodo_data = data[data['id'].str.contains('zenodo', case = False)] # This make sure all letter cases are included.
     zenodo_data = pd.to_datetime(zenodo_data['timestamp']).dt.year
     counts = zenodo_data.value_counts()
-    table = counts.rename_axis('Year').reset_index(name = 'Number of Zenodo cited')
-    
+    table = counts.rename_axis('Year').reset_index(name = 'Number of Zenodo cited') # Rename axis name of output table
+
     print("Sort by number of citations:\n")
     print(table, "\n")
 

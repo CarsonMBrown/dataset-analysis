@@ -28,11 +28,21 @@
 \title{%
     CS2006: Python 2 \\
     \Large Dataset Analysis With Pandas} \\
-\author{, , 180008859 Tutor: Stephen Linton}
+\author{, 180000269, 180008859 Tutor: Stephen Linton}
 \date{May 07, 2020}
 \maketitle
 
 \section*{Overview}
+In this practical we are asked to use Python Data Analysis Library (Pandas) to analyse Wikipedia citation data of four languages: German, English, Chinese and Ukrainian.
+
+The raw data of each language is presented in a TSV (tab-separated values) file.
+
+Before starting detailed analysis of each language, verification and pre-processing of the raw data are very important first steps.
+
+After raw data has been read in correctly and cleaned, initial descriptive analysis is performed. Finally, additional analytics are performed to explore the data further.
+
+
+
 
 \subsection*{Base Specifications}
 
@@ -41,6 +51,9 @@
 \end{itemize}
 
 \section*{Design}
+Analytics take form in modular functions, using pandas dataframe as parameter, and results of analysis are outputted in a series of print statements.
+
+Extension work has been designed similarly as modular functions, runs in series after initial analysis.
 
 \subsection*{Base Specifications}
 
@@ -75,7 +88,7 @@ especially if they were specific to a suggested requirement difficulty.
 \subsection*{Easy, Medium, and Hard Requirements}
 \begin{center} \emph{Easy} \end{center}
 \begin{itemize}[noitemsep]
-    \item
+    \item Output a table with percentage of records for each identifier type
     \item
     \item Output a table with the number of citations from arXiv by the year of their appearance.
 \end{itemize}
@@ -84,7 +97,7 @@ especially if they were specific to a suggested requirement difficulty.
 \begin{itemize}[noitemsep]
     \item Find an average number of citations per page
     \item
-    \item
+    \item Output a table with the number of citations from Zenodo by the year of their appearance
 \end{itemize}
 
 \begin{center} \emph{Hard} \end{center}
