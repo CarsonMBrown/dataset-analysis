@@ -40,7 +40,7 @@ def totalRecords(data):
 def rangeOfDate(data):
     """Basic: Outputting the range of date"""
     date_data = pd.to_datetime(data['timestamp'])  # Parse the column 'timestamp' as datatime type in Pandas
-    date_data = date_data.sort_values(ascending=True)
+    date_data = date_data.sort_values(ascending = True)
 
     print("Earliest date (ns, UTC):", date_data.iloc[0])
     print("Earliest date:", date_data.iloc[0].date())
@@ -53,24 +53,24 @@ def recordsByType(data):
     """Basic: Sort records by citation type"""
     counts = data['type'].value_counts()
     # use of value_counts that has been optimised for object type
-    table = counts.rename_axis('Record type').reset_index(name='Record count')
+    table = counts.rename_axis('Record type').reset_index(name = 'Record count')
     print(table)
     print("--- End of initial analysis --- ", "\n")
 
 def recordsByPercentage(data):
     """Easy: Outputting percentage of each record type"""
-    percent = data['type'].value_counts(normalize=True).mul(100).round(1).astype(
+    percent = data['type'].value_counts(normalize = True).mul(100).round(1).astype(
         str)  # normalize parameter calculates percentage as a decimal number
-    table = percent.rename_axis('Record type').reset_index(name='Percentage %')
+    table = percent.rename_axis('Record type').reset_index(name = 'Percentage %')
     print(table, "\n")
 
 
 def zenodoByYear(data):
     """Medium: Outputting citations referencing Zenodo by year"""
-    zenodo_data = data[data['id'].str.contains('zenodo', case=False)]  # This make sure all letter cases are included.
+    zenodo_data = data[data['id'].str.contains('zenodo', case = False)]  # This make sure all letter cases are included.
     zenodo_data = pd.to_datetime(zenodo_data['timestamp']).dt.year
     counts = zenodo_data.value_counts()
-    table = counts.rename_axis('Year').reset_index(name='Number of Zenodo cited')  # Rename axis name of output table
+    table = counts.rename_axis('Year').reset_index(name = 'Number of Zenodo cited')  # Rename axis name of output table
 
     print("Sort by number of citations:\n")
     print(table, "\n")
