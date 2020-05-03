@@ -18,6 +18,7 @@ def checkData(data):
     x = x and checkColNames(data)
     x = x and checkTypes(data)
     if not x:
+        print("Data has inconsistencies, trying to run analysis may result in unexpected errors")
         sys.exit(1)
 
 
