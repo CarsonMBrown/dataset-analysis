@@ -10,8 +10,8 @@ def main():
     for arg in sys.argv[1:]:
         data = readFile(arg)
         if data is not None:
-            # CleanData.refineData(data)
-            # CleanData.checkData(data)
+            CleanData.refineData(data)
+            CleanData.checkData(data)
             totalRecords(data)
             rangeOfDate(data)
             recordsByType(data)
@@ -19,7 +19,7 @@ def main():
             zenodoByYear(data)
             avgDaysSinceCitation(data)
             tenLargestPagesBySources(data)
-
+            numberAndPercentageOfCitations(data)
 
 def indentDataFrame(toIndent):
     return "\t" + toIndent.to_string().replace("\n", "\n\t") + "\n"
@@ -83,7 +83,20 @@ def tenLargestPagesBySources(data):
     title_group_counts = data.groupby('page_title').count()
     ten_largest = title_group_counts.nlargest(10, 'timestamp').index.values
     print("The first 10 pages citing the largest number of sources are:")
-    print(ten_largest)
+    for values in ten_largest:
+        print("\t" + values)
+
+
+def numberAndPercentageOfCitations(data):
+    citations_by_year = data.groupby(data.timestamp.dt.year).count()
+    citations_by_year = citations_by_year['id']
+    citations_by_year = citations_by_year.to_frame()
+    citations_by_year.index.name = 'Years'
+    citations_by_year = citations_by_year.rename(columns={'id': 'Citations'})
+    total_citations = citations_by_year['Citations'].sum()
+    citations_by_year['Percentage'] = citations_by_year.apply(
+        lambda x: citations_by_year['Citations'] * 100 / total_citations)
+    print(citations_by_year)
 
 
 if __name__ == '__main__':
