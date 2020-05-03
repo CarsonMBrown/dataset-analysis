@@ -10,14 +10,15 @@ def main():
     for arg in sys.argv[1:]:
         data = readFile(arg)
         if data is not None:
-            CleanData.refineData(data)
-            CleanData.checkData(data)
-            # totalRecords(data)
-            # rangeOfDate(data)
-            # recordsByType(data)
-            # recordsByPercentage(data)
-            # zenodoByYear(data)
+            # CleanData.refineData(data)
+            # CleanData.checkData(data)
+            totalRecords(data)
+            rangeOfDate(data)
+            recordsByType(data)
+            recordsByPercentage(data)
+            zenodoByYear(data)
             avgDaysSinceCitation(data)
+            tenLargestPagesBySources(data)
 
 
 def indentDataFrame(toIndent):
@@ -76,6 +77,13 @@ def avgDaysSinceCitation(data):
     average_date = data.timestamp.mean()
     average_difference = datetime.datetime(2018, 3, 1) - average_date.tz_localize(None)
     print("Average days since citation are " + str(average_difference.days))
+
+
+def tenLargestPagesBySources(data):
+    title_group_counts = data.groupby('page_title').count()
+    ten_largest = title_group_counts.nlargest(10, 'timestamp').index.values
+    print("The first 10 pages citing the largest number of sources are:")
+    print(ten_largest)
 
 
 if __name__ == '__main__':
