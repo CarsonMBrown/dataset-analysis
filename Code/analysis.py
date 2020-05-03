@@ -12,14 +12,20 @@ def main():
         if data is not None:
             CleanData.refineData(data)
             CleanData.checkData(data)
+
             totalRecords(data)
             rangeOfDate(data)
             recordsByType(data)
             recordsByPercentage(data)
             zenodoByYear(data)
+
             avgDaysSinceCitation(data)
             tenLargestPagesBySources(data)
             numberAndPercentageOfCitations(data)
+
+            arxivCitations(data)
+            avgCitatations(data)
+            mostCommonCitations(data)
 
 def indentDataFrame(toIndent):
     return "\t" + toIndent.to_string().replace("\n", "\n\t") + "\n"
@@ -27,6 +33,7 @@ def indentDataFrame(toIndent):
 
 def totalRecords(data):
     """Basic: Outputting number of records after pre-processing"""
+    print("--- Initial Descriptive Analysis ---")
     print("Number of records:", data.shape[0], "\n")
 
 
@@ -47,8 +54,8 @@ def recordsByType(data):
     counts = data['type'].value_counts()
     # use of value_counts that has been optimised for object type
     table = counts.rename_axis('Record type').reset_index(name='Record count')
-    print(table, "\n")
-
+    print(table)
+    print("--- End of initial analysis --- ", "\n")
 
 def recordsByPercentage(data):
     """Easy: Outputting percentage of each record type"""
@@ -76,7 +83,7 @@ def zenodoByYear(data):
 def avgDaysSinceCitation(data):
     average_date = data.timestamp.mean()
     average_difference = datetime.datetime(2018, 3, 1) - average_date.tz_localize(None)
-    print("Average days since citation are " + str(average_difference.days))
+    print("Average days since citation are: " + str(average_difference.days), "\n")
 
 
 def tenLargestPagesBySources(data):
@@ -85,6 +92,7 @@ def tenLargestPagesBySources(data):
     print("The first 10 pages citing the largest number of sources are:")
     for values in ten_largest:
         print("\t" + values)
+    print("\n")
 
 
 def numberAndPercentageOfCitations(data):
@@ -97,6 +105,35 @@ def numberAndPercentageOfCitations(data):
     citations_by_year['Percentage'] = citations_by_year.apply(
         lambda x: citations_by_year['Citations'] * 100 / total_citations)
     print(citations_by_year)
+    print("\n")
+
+
+def arxivCitations(data):
+    arxivCitations = data.query("type == \"arxiv\"")
+    onlyYears = arxivCitations["timestamp"].dt.year
+    yearCounts = onlyYears.value_counts()
+    print("Number Of ArXiv Citations By Year: ")
+    print(indentDataFrame(yearCounts))
+
+
+def avgCitatations(data):
+    valueCount = data["page_id"].value_counts()
+    mean = valueCount.mean()
+    median = valueCount.median()
+    print("Average Citations:")
+    print("\tMean:   " + str(mean))
+    print("\tMedian: " + str(median) + "\n")
+
+
+def toUpper(s):
+    return s.upper()
+
+
+def mostCommonCitations(data):
+    print("The 10 Most Cited Sources Are: ")
+    citations = data["type"].apply(toUpper) + " " + data["id"]
+    citationCount = citations.value_counts().head(10)
+    print(indentDataFrame(citationCount))
 
 
 if __name__ == '__main__':
