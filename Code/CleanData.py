@@ -1,6 +1,6 @@
 import sys
 import os
-from FileHelper import *
+from fileHelper import *
 import difflib
 import re
 

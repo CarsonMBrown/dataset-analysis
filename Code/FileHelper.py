@@ -10,7 +10,7 @@ def readFile(filename):
     Opens a file as a pandas dataframe and checks if it is a valid file.
     Returns either the dataframe or None.
     """
-    filepath = "../Data/" + filename + ".tsv"
+    filepath = filename + ".tsv"
     if fileValid(filepath) :
         print("Reading From: " + filepath)
         data = pd.read_csv(filepath, encoding='utf8', error_bad_lines=False, warn_bad_lines=False, delimiter="\t")

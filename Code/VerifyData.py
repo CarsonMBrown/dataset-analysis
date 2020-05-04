@@ -1,6 +1,6 @@
 import pandas as pd
 import sys
-from FileHelper import *
+from fileHelper import *
 
 def main():
     for arg in sys.argv[1:] :

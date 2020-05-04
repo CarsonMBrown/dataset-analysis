@@ -2,38 +2,52 @@ import pandas as pd
 import sys
 import textwrap
 import datetime
-import CleanData
-from FileHelper import *
+import cleanData
+from fileHelper import *
 
 
 def main():
     for arg in sys.argv[1:]:
         data = readFile(arg)
         if data is not None:
-            CleanData.refineData(data)
-            CleanData.checkData(data)
+            cleanData.refineData(data)
+            cleanData.checkData(data)
+
+            print("\n--- Beginning of Initial Analysis ---\n")
 
             totalRecords(data)
             rangeOfDate(data)
             recordsByType(data)
-            recordsByPercentage(data)
-            zenodoByYear(data)
 
+            print("--- End of Initial Analysis ---\n")
+            print("--- Beginning of Easy Extensions ---\n")
+
+            recordsByPercentage(data)
             avgDaysSinceCitation(data)
+            arxivCitations(data)
+
+            print("--- End of Easy Extensions ---\n")
+            print("--- Beginning of Medium Extensions ---\n")
+
+            avgCitatations(data)
+            zenodoByYear(data)
             tenLargestPagesBySources(data)
+
+            print("--- End of Medium Extensions ---\n")
+            print("--- Beginning of Hard Extensions ---\n")
+
+            mostCommonCitations(data)
             numberAndPercentageOfCitations(data)
 
-            arxivCitations(data)
-            avgCitatations(data)
-            mostCommonCitations(data)
+            print("--- End of Hard Extensions ---\n")
 
 def indentDataFrame(toIndent):
+    "Helper Function For Use in Formatting."
     return "\t" + toIndent.to_string().replace("\n", "\n\t") + "\n"
 
 
 def totalRecords(data):
     """Basic: Outputting number of records after pre-processing"""
-    print("--- Initial Descriptive Analysis ---")
     print("Number of records:", data.shape[0], "\n")
 
 
@@ -42,11 +56,13 @@ def rangeOfDate(data):
     date_data = pd.to_datetime(data['timestamp'])  # Parse the column 'timestamp' as datatime type in Pandas
     date_data = date_data.sort_values(ascending = True)
 
-    print("Earliest date (ns, UTC):", date_data.iloc[0])
-    print("Earliest date:", date_data.iloc[0].date())
+    print("The Range of Dates Represented in the Data:")
 
-    print("Latest date (ns, UTC):", date_data.iloc[-1])
-    print("Latest date:", date_data.iloc[-1].date(), "\n")
+    print("\tEarliest date (ns, UTC):", date_data.iloc[0])
+    print("\tEarliest date:", date_data.iloc[0].date())
+
+    print("\tLatest date (ns, UTC):", date_data.iloc[-1])
+    print("\tLatest date:", date_data.iloc[-1].date(), "\n")
 
 
 def recordsByType(data):
@@ -54,16 +70,25 @@ def recordsByType(data):
     counts = data['type'].value_counts()
     # use of value_counts that has been optimised for object type
     table = counts.rename_axis('Record type').reset_index(name = 'Record count')
-    print(table)
-    print("--- End of initial analysis --- ", "\n")
+
+    print("Records By Type: ")
+    print(indentDataFrame(table))
 
 def recordsByPercentage(data):
     """Easy: Outputting percentage of each record type"""
     percent = data['type'].value_counts(normalize = True).mul(100).round(1).astype(
         str)  # normalize parameter calculates percentage as a decimal number
     table = percent.rename_axis('Record type').reset_index(name = 'Percentage %')
-    print(table, "\n")
+    print("Percent of Records for Each Citation Type:")
+    print(indentDataFrame(table))
 
+def arxivCitations(data):
+    """Easy: Output a table with the number of citations from arXiv by the year of their appearance."""
+    arxivCitations = data.query("type == \"arxiv\"")
+    onlyYears = arxivCitations["timestamp"].dt.year
+    yearCounts = onlyYears.value_counts()
+    print("Number Of ArXiv Citations By Year: ")
+    print(indentDataFrame(yearCounts))
 
 def zenodoByYear(data):
     """Medium: Outputting citations referencing Zenodo by year"""
@@ -72,27 +97,29 @@ def zenodoByYear(data):
     counts = zenodo_data.value_counts()
     table = counts.rename_axis('Year').reset_index(name = 'Number of Zenodo cited')  # Rename axis name of output table
 
-    print("Sort by number of citations:\n")
-    print(table, "\n")
+    print("Number of Citations from Zenodo: ")
 
-    print("Sort by year of appearance:\n")
+    print("\tSorted by Number of Citations:")
+    print(indentDataFrame(table))
+
+    print("\tSorted by Year of Appearance:")
     table = table.sort_values(table.columns[0])
-    print(table, "\n")
+    print(indentDataFrame(table))
 
 
 def avgDaysSinceCitation(data):
     average_date = data.timestamp.mean()
     average_difference = datetime.datetime(2018, 3, 1) - average_date.tz_localize(None)
-    print("Average days since citation are: " + str(average_difference.days), "\n")
+    print("The Average Number Of Days Since A Citation Was Added Is: " + str(average_difference.days), "\n")
 
 
 def tenLargestPagesBySources(data):
     title_group_counts = data.groupby('page_title').count()
     ten_largest = title_group_counts.nlargest(10, 'timestamp').index.values
-    print("The first 10 pages citing the largest number of sources are:")
+    print("The First 10 Pages Citing The Largest Number of Sources Are:")
     for values in ten_largest:
         print("\t" + values)
-    print("\n")
+    print()
 
 
 def numberAndPercentageOfCitations(data):
@@ -104,32 +131,27 @@ def numberAndPercentageOfCitations(data):
     total_citations = citations_by_year['Citations'].sum()
     citations_by_year['Percentage'] = citations_by_year.apply(
         lambda x: citations_by_year['Citations'] * 100 / total_citations)
-    print(citations_by_year)
-    print("\n")
-
-
-def arxivCitations(data):
-    arxivCitations = data.query("type == \"arxiv\"")
-    onlyYears = arxivCitations["timestamp"].dt.year
-    yearCounts = onlyYears.value_counts()
-    print("Number Of ArXiv Citations By Year: ")
-    print(indentDataFrame(yearCounts))
+    print("The Number and Percentage of Citations Added Per Year:")
+    print(indentDataFrame(citations_by_year))
 
 
 def avgCitatations(data):
+    """Medium: Find an average number of citations per page."""
     valueCount = data["page_id"].value_counts()
     mean = valueCount.mean()
     median = valueCount.median()
     print("Average Citations:")
     print("\tMean:   " + str(mean))
-    print("\tMedian: " + str(median) + "\n")
+    print("\tMedian: " + str(median), "\n")
 
 
 def toUpper(s):
+    """Helper function: allows for a whole list to be converted to uppercase using the .apply() function in the mostCommonCitations() function."""
     return s.upper()
 
 
 def mostCommonCitations(data):
+    """Hard: Find first ten most highly cited sources (for the given language version)."""
     print("The 10 Most Cited Sources Are: ")
     citations = data["type"].apply(toUpper) + " " + data["id"]
     citationCount = citations.value_counts().head(10)
