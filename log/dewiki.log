@@ -1,0 +1,133 @@
+Reading From: dewiki.tsv
+1 Lines with mismatched pmid removed
+868 Lines with mismatched isbn removed
+The following columns have empty fields
+page_title    2
+dtype: int64
+There are 0 Duplicate Rows in the Data
+
+--- Beginning of Initial Analysis ---
+
+Number of records: 1648868
+
+The Range of Dates Represented in the Data:
+        Earliest date (ns, UTC): 2001-12-02 17:08:33+00:00
+        Earliest date: 2001-12-02
+        Latest date (ns, UTC): 2018-03-02 01:26:31+00:00
+        Latest date: 2018-03-02
+
+Records By Type:
+          Record type  Record count
+        0        isbn       1517103
+        1         doi        112299
+        2        pmid         11925
+        3       arxiv          5203
+        4         pmc          2338
+
+--- End of Initial Analysis ---
+
+--- Beginning of Easy Extensions ---
+
+Percent of Records for Each Citation Type:
+          Record type Percentage %
+        0        isbn         92.0
+        1         doi          6.8
+        2        pmid          0.7
+        3       arxiv          0.3
+        4         pmc          0.1
+
+The Average Number Of Days Since A Citation Was Added Is: 2132
+
+Number Of ArXiv Citations By Year:
+        2012    920
+        2017    857
+        2013    847
+        2016    582
+        2011    508
+        2014    430
+        2015    416
+        2010    136
+        2009    136
+        2008    130
+        2018    101
+        2007     58
+        2006     55
+        2005     22
+        2004      5
+
+--- End of Easy Extensions ---
+
+--- Beginning of Medium Extensions ---
+
+Average Citations:
+        Mean:   2.885264375418869
+        Median: 2.0
+
+Number of Citations from Zenodo:
+        Sorted by Number of Citations:
+           Year  Number of Zenodo cited
+        0  2017                      15
+        1  2016                       9
+        2  2015                       9
+        3  2018                       3
+        4  2014                       1
+
+        Sorted by Year of Appearance:
+           Year  Number of Zenodo cited
+        4  2014                       1
+        2  2015                       9
+        1  2016                       9
+        0  2017                      15
+        3  2018                       3
+
+The First 10 Pages Citing The Largest Number of Sources Are:
+        R (Programmiersprache)
+        Moderne Tests der Lorentzinvarianz
+        Liste der Bücher von Wolfgang Hohlbein
+        Graduate Texts in Mathematics
+        Digitale Bibliothek (Produkt)
+        Liste der Stammzellmarker
+        Massenaussterben
+        Kritische Studien zur Geschichtswissenschaft/Titel
+        Ernest Rutherford/Schriften
+        Liste der Sherlock-Holmes-Pastiches
+
+--- End of Medium Extensions ---
+
+--- Beginning of Hard Extensions ---
+
+The 10 Most Cited Sources Are:
+        ISBN 3170032631       7359
+        ISBN 1579582931       3276
+        ISBN 3110157144       2040
+        ISBN 3800145731       1672
+        ISBN 3824603217       1668
+        ISBN 9783867772020    1634
+        ISBN 0801882214       1560
+        ISBN 3896023403       1426
+        ISBN 0801857899       1372
+        ISBN 9783895335563    1359
+
+The Number and Percentage of Citations Added Per Year:
+               Citations  Percentage
+        Years
+        2001           1    0.000061
+        2002          82    0.004973
+        2003        1231    0.074657
+        2004       13850    0.839970
+        2005       39588    2.400920
+        2006       75921    4.604432
+        2007       95263    5.777479
+        2008      113345    6.874110
+        2009      124900    7.574894
+        2010      140787    8.538403
+        2011      144745    8.778447
+        2012      156267    9.477229
+        2013      147487    8.944743
+        2014      139633    8.468416
+        2015      142590    8.647751
+        2016      139019    8.431178
+        2017      147249    8.930309
+        2018       26910    1.632029
+
+--- End of Hard Extensions ---
