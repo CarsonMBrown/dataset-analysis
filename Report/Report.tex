@@ -60,13 +60,11 @@ to complete
 We were specifically asked for the following features:
 
 \begin{itemize}[noitemsep]
-	\item
-    \item
-    \item
-    \item
-    \item
-    \item
-    \item
+    \item Check consistency of initial raw data
+    \item Refine data in case of inconsistencies before analysis
+    \item Output total number of records
+    \item Output range of dates represented in the data
+    \item Output a table with number of records for each identifier type
 \end{itemize}
 
 \section*{Design}
@@ -110,7 +108,7 @@ Parsing timestamp column to date_time format rather than object format has helpe
 While initially we parse timestamp column to datatime during the pre-processing stage, we realized that after some research there is a more efficient way to parse ISO 8601 format in the \code{read_csv} stage.
 In fact, one of the parameter of \code{read_csv}, \code{parse_dates}, specially mentions that it has a fast route for ISO 8601 formatted data.
 
-Other important Pandas function usage includes \code{groupby} and \code{value_counts. On the one hand, \code{groupby} has been efficient in operating data relating one column to other columns.
+Other important high performance Pandas function usage includes \code{groupby} and \code{value_counts}. On the one hand, \code{groupby} has been efficient in operating data relating one column to other columns.
 \code{value_counts}, on the other hand, focuses on finding frequencies of values in a single column.
 
 Moreover, Pandas \code{.apply()} function, which is a powerful replacement of iterative functions, has been used in Hard extensions.
