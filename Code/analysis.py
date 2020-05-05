@@ -10,8 +10,8 @@ def main():
     for arg in sys.argv[1:]:
         data = readFile(arg)
         if data is not None:
-            data = CleanData.refineData(data)
             CleanData.checkData(data)
+            data = CleanData.refineData(data)
 
             print("\n--- Beginning of Initial Analysis ---\n")
 
