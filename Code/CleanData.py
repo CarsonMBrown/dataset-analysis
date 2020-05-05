@@ -1,6 +1,6 @@
 import sys
 import os
-from fileHelper import *
+from FileHelper import *
 import difflib
 import re
 
@@ -48,12 +48,12 @@ def checkTypes(data):
             if data.dtypes[name] != "int64":
                 print("Column \"" + name + "\" contains Invalid Type")
                 x = False
+
         elif name == 'timestamp':
-            try:
-                data[name] = pd.to_datetime(data[name])
-            except TypeError:
-                x = False
+            if data.dtypes[name] != "datetime64[ns, UTC]":
                 print("Column \"" + name + "\" contains Invalid Type")
+                x = False
+
         elif name == 'type':
             for value in data[name].unique():
                 if not (value in possible_values_for_type):

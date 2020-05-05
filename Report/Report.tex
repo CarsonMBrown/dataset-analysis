@@ -86,27 +86,37 @@ especially if they were specific to a suggested requirement difficulty.
 \begin{center} \emph{Easy} \end{center}
 \begin{itemize}[noitemsep]
     \item Output a table with percentage of records for each identifier type
-    \item
+    \item Calculate an average number of days since citation appeared on Wikipedia
     \item Output a table with the number of citations from arXiv by the year of their appearance.
 \end{itemize}
 
 \begin{center} \emph{Medium} \end{center}
 \begin{itemize}[noitemsep]
     \item Find an average number of citations per page
-    \item
+    \item Find first ten pages citing the largest number of sources
     \item Output a table with the number of citations from Zenodo by the year of their appearance
 \end{itemize}
 
 \begin{center} \emph{Hard} \end{center}
 \begin{itemize}[noitemsep]
     \item Find first ten most highly cited sources
-    \item
-    \item
+    \item Output a table with the number and percentage of citations appearing on Wikipedia by the number of years since their appearance
+    \item Analyse and optimise the performance of different steps of your analysis (see Evaluation section below)
 \end{itemize}
 
 \section*{Evaluation}
+Parsing timestamp column to date_time format rather than object format has helped to optimise further analysis, because it is arduous and memory-inefficent to work with date_time as strings.
 
-Overall, we are very happy with the progress and completeness of our solution to both the base and additional requirements.
+While initially we parse timestamp column to datatime during the pre-processing stage, we realized that after some research there is a more efficient way to parse ISO 8601 format in the \code{read_csv} stage.
+In fact, one of the parameter of \code{read_csv}, \code{parse_dates}, specially mentions that it has a fast route for ISO 8601 formatted data.
+
+Other important Pandas function usage includes \code{groupby} and \code{value_counts. On the one hand, \code{groupby} has been efficient in operating data relating one column to other columns.
+\code{value_counts}, on the other hand, focuses on finding frequencies of values in a single column.
+
+Moreover, Pandas \code{.apply()} function, which is a powerful replacement of iterative functions, has been used in Hard extensions.
+
+Overall, we are very happy with the progress and completeness of our solution to both the base and additional requirements. Our \code{.apply()} takes another function as its input and applies it along an axis of a DataFrame.
+In such cases where we are passing functions, a lambda is often convenient to package everything together in an optimised manner.
 
 \section*{Conclusion}
 
@@ -126,9 +136,15 @@ We did not source any code from anywhere and wrote all the code submitted oursel
 \href{https://www.w3resource.com/pandas/series/series-value_counts.php}{values_counts function and parameter usage}
 \newline - Used some parameters such as normalize and ascending to sort resultant dataframe
 
+\href{https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_csv.html}{read_csv documentation of Pandas}
+\newline - Used to parse datetime at input stage, optimise performance
+
 \href{https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.to_datetime.html}{use pandas to parse a column to datetime}
 \newline - Used to analyse timestamp column efficiently
 
 \href{https://docs.python.org/3/library/datetime.html} {understand python datetime}
 \newline - Used to extract year, date from timestamp column
+
+\href{https://books.google.co.uk/books?id=LcHgDwAAQBAJ&pg=PT337&lpg=PT337&dq=pandas+value_counts+performance&source=bl&ots=bgNWdiwkVC&sig=ACfU3U0bGo5e7tdN6bztLRuGNm3EC1vI6Q&hl=en&sa=X&ved=2ahUKEwjzpMjT9JzpAhXDTxUIHXdJDBgQ6AEwBnoECAoQAQ#v=onepage&q=pandas%20value_counts%20performance&f=false} {Pandas high performance functions}
+\newline - Referenced to analyse optimisation when using groupby and value_counts functions
 \end{document}

@@ -2,16 +2,16 @@ import pandas as pd
 import sys
 import textwrap
 import datetime
-import cleanData
-from fileHelper import *
+import CleanData
+from FileHelper import *
 
 
 def main():
     for arg in sys.argv[1:]:
         data = readFile(arg)
         if data is not None:
-            cleanData.refineData(data)
-            cleanData.checkData(data)
+            CleanData.refineData(data)
+            CleanData.checkData(data)
 
             print("\n--- Beginning of Initial Analysis ---\n")
 
@@ -54,7 +54,7 @@ def totalRecords(data):
 
 def rangeOfDate(data):
     """Basic: Outputting the range of date"""
-    date_data = pd.to_datetime(data['timestamp'])  # Parse the column 'timestamp' as datatime type in Pandas
+    date_data = data['timestamp']
     date_data = date_data.sort_values(ascending = True)
 
     print("The Range of Dates Represented in the Data:")
@@ -78,11 +78,11 @@ def recordsByType(data):
 
 def recordsByPercentage(data):
     """Easy: Outputting percentage of each record type"""
-    percent = data['type'].value_counts(normalize = True).mul(100).round(1).astype(
-        str)  # normalize parameter calculates percentage as a decimal number
+    percent = data['type'].value_counts(normalize = True).mul(100).round(1).astype(str) # normalize parameter calculates percentage as a decimal number
     table = percent.rename_axis('Record type').reset_index(name = 'Percentage %')
     print("Percent of Records for Each Citation Type:")
     print(indentDataFrame(table))
+
 
 def arxivCitations(data):
     """Easy: Output a table with the number of citations from arXiv by the year of their appearance."""
@@ -108,7 +108,6 @@ def zenodoByYear(data):
     table = counts.rename_axis('Year').reset_index(name = 'Number of Zenodo cited')  # Rename axis name of output table
 
     print("Number of Citations from Zenodo: ")
-
     print("\tSorted by Number of Citations:")
     print(indentDataFrame(table))
 
