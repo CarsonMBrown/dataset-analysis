@@ -1,6 +1,6 @@
 import sys
 import os
-from fileHelper import *
+from FileHelper import *
 import difflib
 import re
 
@@ -9,7 +9,7 @@ def main():
     for arg in sys.argv[1:]:
         data = readFile(arg)
         if data is not None:
-            refineData(data)
+            data = refineData(data)
             checkData(data)
 
 
@@ -48,12 +48,12 @@ def checkTypes(data):
             if data.dtypes[name] != "int64":
                 print("Column \"" + name + "\" contains Invalid Type")
                 x = False
+
         elif name == 'timestamp':
-            try:
-                data[name] = pd.to_datetime(data[name])
-            except TypeError:
-                x = False
+            if data.dtypes[name] != "datetime64[ns, UTC]":
                 print("Column \"" + name + "\" contains Invalid Type")
+                x = False
+
         elif name == 'type':
             for value in data[name].unique():
                 if not (value in possible_values_for_type):
@@ -67,16 +67,18 @@ def checkTypes(data):
 
 
 def refineData(data):
-    checkTypeIdMismatch(data)
-    handleEmptyValues(data)
-    removeDuplicates(data)
+    data = checkTypeIdMismatch(data)
+    data = handleEmptyValues(data)
+    data = removeDuplicates(data)
+    return data
 
 
 def checkTypeIdMismatch(data):
     # possible_values_for_type = ["doi", "isbn", "pmid", "pmc", "arxiv"]
     data = data.reset_index(drop=True)
-    checkPMIDMismatch(data)
-    checkISBNMismatch(data)
+    data = checkPMIDMismatch(data)
+    data = checkISBNMismatch(data)
+    return data
 
 
 def checkPMIDMismatch(data):
@@ -85,6 +87,7 @@ def checkPMIDMismatch(data):
     rows_id_not_valid = rows_with_pmid[~rows_with_pmid.id.str.match("^(0{0,}\d{1,8})$")]
     data.drop(rows_id_not_valid.index, inplace=True)
     print(str(num_rows - data.shape[0]) + " Lines with mismatched pmid removed")
+    return data
 
 
 def checkISBNMismatch(data):
@@ -93,6 +96,7 @@ def checkISBNMismatch(data):
     rows_id_not_valid = rows_with_pmid[~rows_with_pmid.id.str.match("^(97(8|9))?\d{9}(\d|X)$")]
     data.drop(rows_id_not_valid.index, inplace=True)
     print(str(num_rows - data.shape[0]) + " Lines with mismatched isbn removed")
+    return data
 
 
 def handleEmptyValues(data):
@@ -103,12 +107,14 @@ def handleEmptyValues(data):
         print("The following columns have empty fields")
         print(num_of_empty_in_col)
         data = data.dropna()
+    return data
 
 
 def removeDuplicates(data):
     data_rows = data.shape[0]
     data = data.drop_duplicates()
     print("There are " + str(data_rows - data.shape[0]) + " Duplicate Rows in the Data")
+    return data
 
 
 if __name__ == '__main__':

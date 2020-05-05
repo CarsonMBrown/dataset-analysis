@@ -13,7 +13,7 @@ def readFile(filename):
     filepath = filename + ".tsv"
     if fileValid(filepath) :
         print("Reading From: " + filepath)
-        data = pd.read_csv(filepath, encoding='utf8', error_bad_lines=False, warn_bad_lines=False, delimiter="\t")
+        data = pd.read_csv(filepath, encoding = 'utf8', parse_dates = ['timestamp'], error_bad_lines=False, warn_bad_lines=False, delimiter="\t")
         return data
     else:
         print("File Unable To Be Read")
