@@ -41,8 +41,9 @@ def main():
 
             print("--- End of Hard Extensions ---\n")
 
+
 def indentDataFrame(toIndent):
-    "Helper Function For Use in Formatting."
+    """Helper Function For Use in Formatting."""
     return "\t" + toIndent.to_string().replace("\n", "\n\t") + "\n"
 
 
@@ -74,6 +75,7 @@ def recordsByType(data):
     print("Records By Type: ")
     print(indentDataFrame(table))
 
+
 def recordsByPercentage(data):
     """Easy: Outputting percentage of each record type"""
     percent = data['type'].value_counts(normalize = True).mul(100).round(1).astype(
@@ -89,6 +91,14 @@ def arxivCitations(data):
     yearCounts = onlyYears.value_counts()
     print("Number Of ArXiv Citations By Year: ")
     print(indentDataFrame(yearCounts))
+
+
+def avgDaysSinceCitation(data):
+    """Easy: Calcuate average number od days since citation apppeared on Wikipedia"""
+    average_date = data.timestamp.mean()
+    average_difference = datetime.datetime(2018, 3, 1) - average_date.tz_localize(None)
+    print("The Average Number Of Days Since A Citation Was Added Is: " + str(average_difference.days), "\n")
+
 
 def zenodoByYear(data):
     """Medium: Outputting citations referencing Zenodo by year"""
@@ -107,13 +117,18 @@ def zenodoByYear(data):
     print(indentDataFrame(table))
 
 
-def avgDaysSinceCitation(data):
-    average_date = data.timestamp.mean()
-    average_difference = datetime.datetime(2018, 3, 1) - average_date.tz_localize(None)
-    print("The Average Number Of Days Since A Citation Was Added Is: " + str(average_difference.days), "\n")
+def avgCitatations(data):
+    """Medium: Find an average number of citations per page."""
+    valueCount = data["page_id"].value_counts()
+    mean = valueCount.mean()
+    median = valueCount.median()
+    print("Average Citations:")
+    print("\tMean:   " + str(mean))
+    print("\tMedian: " + str(median), "\n")
 
 
 def tenLargestPagesBySources(data):
+    """Medium: Ten pages citing the largest number of sources"""
     title_group_counts = data.groupby('page_title').count()
     ten_largest = title_group_counts.nlargest(10, 'timestamp').index.values
     print("The First 10 Pages Citing The Largest Number of Sources Are:")
@@ -123,6 +138,7 @@ def tenLargestPagesBySources(data):
 
 
 def numberAndPercentageOfCitations(data):
+    """Hard: Output a table with number and percentage of citations by number of years"""
     citations_by_year = data.groupby(data.timestamp.dt.year).count()
     citations_by_year = citations_by_year['id']
     citations_by_year = citations_by_year.to_frame()
@@ -133,16 +149,6 @@ def numberAndPercentageOfCitations(data):
         lambda x: citations_by_year['Citations'] * 100 / total_citations)
     print("The Number and Percentage of Citations Added Per Year:")
     print(indentDataFrame(citations_by_year))
-
-
-def avgCitatations(data):
-    """Medium: Find an average number of citations per page."""
-    valueCount = data["page_id"].value_counts()
-    mean = valueCount.mean()
-    median = valueCount.median()
-    print("Average Citations:")
-    print("\tMean:   " + str(mean))
-    print("\tMedian: " + str(median), "\n")
 
 
 def toUpper(s):
