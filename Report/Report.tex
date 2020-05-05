@@ -41,12 +41,6 @@ Before starting detailed analysis of each language, verification and pre-process
 
 After raw data has been read in correctly and cleaned, initial descriptive analysis is performed. Finally, additional analytics are performed to explore the data further.
 
-\subsection*{Base Specifications}
-
-\begin{itemize}[noitemsep]
-
-\end{itemize}
-
 \section*{Design}
 Analytics take form in modular functions, using pandas dataframe as parameter, and results of analysis are outputted in a series of print statements.
 
@@ -134,15 +128,19 @@ We did not source any code from anywhere and wrote all the code submitted oursel
 \href{https://www.w3resource.com/pandas/series/series-value_counts.php}{values\_counts function and parameter usage}
 \newline - Used some parameters such as normalize and ascending to sort resultant dataframe
 
+\noindent
 \href{https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_csv.html}{read\_csv documentation of Pandas}
 \newline - Used to parse datetime at input stage, optimise performance
 
+\noindent
 \href{https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.to_datetime.html}{use pandas to parse a column to datetime}
 \newline - Used to analyse timestamp column efficiently
 
+\noindent
 \href{https://docs.python.org/3/library/datetime.html} {understand python datetime}
 \newline - Used to extract year, date from timestamp column
 
+\noindent
 \href{https://books.google.co.uk/books?id=LcHgDwAAQBAJ&pg=PT337&lpg=PT337&dq=pandas+value_counts+performance&source=bl&ots=bgNWdiwkVC&sig=ACfU3U0bGo5e7tdN6bztLRuGNm3EC1vI6Q&hl=en&sa=X&ved=2ahUKEwjzpMjT9JzpAhXDTxUIHXdJDBgQ6AEwBnoECAoQAQ#v=onepage&q=pandas%20value_counts%20performance&f=false} {Pandas high performance functions}
 \newline - Referenced to analyse optimisation when using groupby and value\_counts functions
 \end{document}
