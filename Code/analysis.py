@@ -47,6 +47,10 @@ def indentDataFrame(toIndent):
     return "\t" + toIndent.to_string().replace("\n", "\n\t") + "\n"
 
 
+def indentWithoutIndex(toIndent):
+    """Helper Function For Use in Formatting"""
+    return "\t" + toIndent.to_string(index = False).replace("\n", "\n\t") + "\n"
+
 def totalRecords(data):
     """Basic: Outputting number of records after pre-processing"""
     print("Number of records:", data.shape[0], "\n")
@@ -73,7 +77,7 @@ def recordsByType(data):
     table = counts.rename_axis('Record type').reset_index(name = 'Record count')
 
     print("Records By Type: ")
-    print(indentDataFrame(table))
+    print(indentWithoutIndex(table))
 
 
 def recordsByPercentage(data):
@@ -81,7 +85,7 @@ def recordsByPercentage(data):
     percent = data['type'].value_counts(normalize = True).mul(100).round(1).astype(str) # normalize parameter calculates percentage as a decimal number
     table = percent.rename_axis('Record type').reset_index(name = 'Percentage %')
     print("Percent of Records for Each Citation Type:")
-    print(indentDataFrame(table))
+    print(indentWithoutIndex(table))
 
 
 def arxivCitations(data):
@@ -109,11 +113,11 @@ def zenodoByYear(data):
 
     print("Number of Citations from Zenodo: ")
     print("\tSorted by Number of Citations:")
-    print(indentDataFrame(table))
+    print(indentWithoutIndex(table))
 
     print("\tSorted by Year of Appearance:")
     table = table.sort_values(table.columns[0])
-    print(indentDataFrame(table))
+    print(indentWithoutIndex(table))
 
 
 def avgCitatations(data):
