@@ -9,12 +9,15 @@ def main():
     for arg in sys.argv[1:]:
         data = readFile(arg)
         if data is not None:
-            data = refineData(data)
             checkData(data)
-            data.to_csv(arg + "Clean.tsv", sep = "\t", index = False)
+            data = refineData(data)
+            data.to_csv(arg + "Clean.tsv", sep="\t", index=False)
 
 
 def checkData(data):
+    """
+    Checks data is of valid format.
+    """
     x = checkNumberOfCols(data)
     x = x and checkColNames(data)
     x = x and checkTypes(data)
@@ -24,6 +27,9 @@ def checkData(data):
 
 
 def checkColNames(data):
+    """
+    Checks column names.
+    """
     col_names = ['page_id', 'page_title', 'rev_id', 'timestamp', 'type', 'id']
     x = True
     for name in col_names:
@@ -34,6 +40,9 @@ def checkColNames(data):
 
 
 def checkNumberOfCols(data):
+    """
+    Checks number of columns.
+    """
     if data.keys().shape[0] == 6:
         return True
     print("Invalid number of columns")
@@ -41,6 +50,9 @@ def checkNumberOfCols(data):
 
 
 def checkTypes(data):
+    """
+    Checks each column has proper type.
+    """
     x = True
     col_names = ['page_id', 'page_title', 'rev_id', 'timestamp', 'type', 'id']
     possible_values_for_type = ["doi", "isbn", "pmid", "pmc", "arxiv"]
@@ -68,6 +80,9 @@ def checkTypes(data):
 
 
 def refineData(data):
+    """
+    Calls fns to refine data.
+    """
     data = checkTypeIdMismatch(data)
     data = handleEmptyValues(data)
     data = removeDuplicates(data)
@@ -75,6 +90,9 @@ def refineData(data):
 
 
 def checkTypeIdMismatch(data):
+    """
+    Calls fns to check for type id mismatch.
+    """
     # possible_values_for_type = ["doi", "isbn", "pmid", "pmc", "arxiv"]
     data = data.reset_index(drop=True)
     data = checkPMIDMismatch(data)
@@ -83,6 +101,9 @@ def checkTypeIdMismatch(data):
 
 
 def checkPMIDMismatch(data):
+    """
+    Checks for PMID mismatch and removes any.
+    """
     num_rows = data.shape[0]
     rows_with_pmid = data[data.type == 'pmid']
     rows_id_not_valid = rows_with_pmid[~rows_with_pmid.id.str.match("^(0{0,}\d{1,8})$")]
@@ -92,6 +113,9 @@ def checkPMIDMismatch(data):
 
 
 def checkISBNMismatch(data):
+    """
+    Checks for isbn mismatch and removes any.
+    """
     num_rows = data.shape[0]
     rows_with_pmid = data[data.type == 'isbn']
     rows_id_not_valid = rows_with_pmid[~rows_with_pmid.id.str.match("^(97(8|9))?\d{9}(\d|X)$")]
@@ -101,7 +125,9 @@ def checkISBNMismatch(data):
 
 
 def handleEmptyValues(data):
-    # Get columns with empty cells
+    """
+    Drops rows with empty values
+    """
     num_of_empty_in_col = data.isnull().sum()
     num_of_empty_in_col = num_of_empty_in_col[num_of_empty_in_col != 0]
     if not num_of_empty_in_col.empty:
@@ -112,6 +138,9 @@ def handleEmptyValues(data):
 
 
 def removeDuplicates(data):
+    """
+    Removes any duplicates from the data. Displays the number of duplicate lines that were removed.
+    """
     data_rows = data.shape[0]
     data = data.drop_duplicates()
     print("There are " + str(data_rows - data.shape[0]) + " Duplicate Rows in the Data")
@@ -120,26 +149,3 @@ def removeDuplicates(data):
 
 if __name__ == '__main__':
     main()
-
-# def cleanInvalidLines(filename):
-#     """
-#     Removes all the invalid lines from the data.
-#     """
-#     filepath = "../Data/" + filename + ".tsv"
-#     if fileValid(filepath) :
-#         print("Cleaning Invalid Lines From: " + filepath)
-#         file = open(filepath, "r", encoding='utf8')
-#         checkTabs(file)
-#
-# def checkTabs(file):
-#     """
-#     Checks for lines that don't contain the correct number of tabs.
-#     """
-#     print("Checking Tabs...")
-#     count = 0
-#     for line in file.readlines():
-#         line = line.strip()
-#         numTabs = line.count("\t")
-#         if numTabs != 5 :
-#             print("\tInvalid Number Of Tabs On Line: ", count)
-#         count = count + 1
