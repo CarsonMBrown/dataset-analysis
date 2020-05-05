@@ -106,9 +106,9 @@ especially if they were specific to a suggested requirement difficulty.
 Parsing timestamp column to date_time format rather than object format has helped to optimise further analysis, because it is arduous and memory-inefficent to work with date_time as strings.
 
 While initially we parse timestamp column to datatime during the pre-processing stage, we realized that after some research there is a more efficient way to parse ISO 8601 format in the \code{read_csv} stage.
-In fact, one of the parameter of \code{read_csv}, \code{parse_dates}, specially mentions that it has a fast route for ISO 8601 formatted data.
+In fact, one of the parameter of \code{read\_csv}, \code{parse\_dates}, specially mentions that it has a fast route for ISO 8601 formatted data.
 
-Other important high performance Pandas function usage includes \code{groupby} and \code{value_counts}. On the one hand, \code{groupby} has been efficient in operating data relating one column to other columns.
+Other important high performance Pandas function usage includes \code{groupby} and \code{value\_counts}. On the one hand, \code{groupby} has been efficient in operating data relating one column to other columns.
 \code{value_counts}, on the other hand, focuses on finding frequencies of values in a single column.
 
 Moreover, Pandas \code{.apply()} function, which is a powerful replacement of iterative functions, has been used in Hard extensions.
@@ -131,7 +131,7 @@ We did not source any code from anywhere and wrote all the code submitted oursel
 \section*{Citations}
 
 \noindent
-\href{https://www.w3resource.com/pandas/series/series-value_counts.php}{values_counts function and parameter usage}
+\href{https://www.w3resource.com/pandas/series/series-value_counts.php}{values\_counts function and parameter usage}
 \newline - Used some parameters such as normalize and ascending to sort resultant dataframe
 
 \href{https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_csv.html}{read_csv documentation of Pandas}
