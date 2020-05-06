@@ -2,16 +2,16 @@ import pandas as pd
 import sys
 import textwrap
 import datetime
-import CleanData
-from FileHelper import *
+import cleanData
+from fileHelper import *
 
 
 def main():
     for arg in sys.argv[1:]:
         data = readFile(arg)
         if data is not None:
-            CleanData.checkData(data)
-            data = CleanData.refineData(data)
+            cleanData.checkData(data)
+            data = cleanData.refineData(data)
 
             print("\n--- Beginning of Initial Analysis ---\n")
 
@@ -48,7 +48,7 @@ def indentDataFrame(toIndent):
 
 
 def indentWithoutIndex(toIndent):
-    """Helper Function For Use in Formatting"""
+    """Another Helper Function For Use in Formatting"""
     return "\t" + toIndent.to_string(index = False).replace("\n", "\n\t") + "\n"
 
 def totalRecords(data):
@@ -62,7 +62,7 @@ def rangeOfDate(data):
     date_data = date_data.sort_values(ascending = True)
 
     print("The Range of Dates Represented in the Data:")
-
+    # Use of iloc function to get first and last element in a sorted column
     print("\tEarliest date (ns, UTC):", date_data.iloc[0])
     print("\tEarliest date:", date_data.iloc[0].date())
 

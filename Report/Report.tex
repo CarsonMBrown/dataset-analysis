@@ -37,17 +37,18 @@ In this practical we are asked to use Python Data Analysis Library (Pandas) to a
 
 The raw data of each language is presented in a TSV (tab-separated values) file.
 
-Before starting detailed analysis of each language, verification and pre-processing of the raw data are very important first steps.
+Before starting detailed analysis of each language, verification and pre-processing of the raw data are very important first steps, which can be executed in \code {cleanData.py}.
 
-After raw data has been read in correctly and cleaned, initial descriptive analysis is performed. Finally, additional analytics are performed to explore the data further.
+After raw data has been read in correctly and cleaned, initial descriptive analysis is performed in \code {analysis.py}. Finally, additional analytics are performed to explore the data further.
 
 \section*{Design}
-Pre-processing raw data is split into two distinct functions, 'checkData' to check if the data is valid and 'refineData' to refine the data further.
+Pre-processing raw data is split into two distinct functions, \code {checkData} to check if the data is valid and \code {refineData} to refine the data further.
 
 Analytics take form in modular functions, using pandas dataframe as parameter, and results of analysis are outputted in a series of print statements.
 
 Extension work has been designed similarly as modular functions, runs in series after initial analysis.
 
+N.B. running \code {analysis.py} on its own does not produce cleaned .tsv file. To obtain cleaned version of raw data, execute \code {cleanData.py}.
 \subsection*{Base Specifications}
 
 The minimum requirements of this project were to implement the parts which were currently undefined
@@ -63,7 +64,6 @@ We were specifically asked for the following features:
     \item Output a table with number of records for each identifier type
 \end{itemize}
 
-\section*{Design}
 
 \subsection*{Base Requirements}
 
@@ -105,13 +105,13 @@ While initially we parse timestamp column to datatime during the pre-processing 
 In fact, one of the parameter of \code{read\_csv}, \code{parse\_dates}, specially mentions that it has a fast route for ISO 8601 formatted data.
 
 Other important high performance Pandas function usage includes \code{groupby} and \code{value\_counts}. On the one hand, \code{groupby} has been efficient in operating data relating one column to other columns.
-\code{value\_counts}, on the other hand, focuses on finding frequencies of values in a single column.
+On the other hand, \code{value\_counts} focuses on finding frequencies of values in a single column.
 
 Moreover, Pandas \code{.apply()} function, which is a powerful replacement of iterative functions, has been used in Hard extensions.
 
-If any illegal values in the data can not be removed or amended without compromising the rest of the data the 'checkData' function prints an error message and exits the program.
+If any illegal values in the data can not be removed or amended without compromising the rest of the data the \code {checkData} function prints an error message and exits the program.
 
-The 'refineData' function removes and illegal and duplicate values to ensure there are not inconsistencies with the analysis.
+The \code{refineData} function removes and illegal and duplicate values to ensure there are not inconsistencies with the analysis.
 
 Overall, we are very happy with the progress and completeness of our solution to both the base and additional requirements. Our \code{.apply()} takes another function as its input and applies it along an axis of a DataFrame.
 In such cases where we are passing functions, a lambda is often convenient to package everything together in an optimised manner.

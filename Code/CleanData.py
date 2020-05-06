@@ -1,11 +1,12 @@
 import sys
 import os
-from FileHelper import *
+from fileHelper import *
 import difflib
 import re
 
 
 def main():
+    """Runs independently to check data, refine data and save data to a new clean .tsv file"""
     for arg in sys.argv[1:]:
         data = readFile(arg)
         if data is not None:
