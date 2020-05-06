@@ -4,7 +4,6 @@ from fileHelper import *
 import difflib
 import re
 
-
 def main():
     """Runs independently to check data, refine data and save data to a new clean .tsv file"""
     for arg in sys.argv[1:]:

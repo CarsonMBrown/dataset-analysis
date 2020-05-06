@@ -2,6 +2,9 @@ import os
 import pandas as pd
 
 def fileValid(filepath):
+    """
+    Checks if a file is a valid file according to the oc library
+    """
     valid = os.access(filepath, os.R_OK)
     return valid
 

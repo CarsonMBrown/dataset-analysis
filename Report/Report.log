@@ -1,0 +1,1324 @@
+This is LuaTeX, Version 1.12.0 (MiKTeX 2.9.7300 64-bit)  (format=lualatex 2020.3.3)  6 MAY 2020 14:10
+ restricted system commands enabled.
+ file:line:error style messages enabled.
+**Report.tex
+(./Report.tex
+LaTeX2e <2020-02-02> patch level 2
+Lua module: luaotfload-main 2020-02-02 3.12 luaotfload entry point
+Lua module: luaotfload-init 2020-02-02 3.12 luaotfload submodule / initializatio
+n
+Lua module: lualibs 2020-02-02 2.70 ConTeXt Lua standard libraries.
+Lua module: lualibs-extended 2020-02-02 2.70 ConTeXt Lua libraries -- extended c
+ollection.
+Lua module: luaotfload-log 2020-02-02 3.12 luaotfload submodule / logging
+Lua module: luaotfload-parsers 2020-02-02 3.12 luaotfload submodule / filelist
+Lua module: luaotfload-configuration 2020-02-02 3.12 luaotfload submodule / conf
+ig file reader
+luaotfload | conf : Root cache directory is C:/Users/Carson Brown/AppData/Local/
+MiKTeX/2.9/luatex-cache/generic-dev/names.
+luaotfload | init : Loading fontloader “fontloader-2020-01-26.lua” from kpse
+-resolved path “C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/lu
+atex/luaotfload/fontloader-2020-01-26.lua”.
+Lua-only attribute luaotfload@state = 2
+Lua-only attribute luaotfload@noligature = 3
+Lua-only attribute luaotfload@syllabe = 4
+luaotfload | init : Context OpenType loader version “3.11”
+Inserting `luaotfload.node_processor' at position 1 in `pre_linebreak_filter'.
+Inserting `luaotfload.node_processor' at position 1 in `hpack_filter'.
+Lua module: luaotfload-loaders 2020-02-02 3.12 luaotfload submodule / callback h
+andling
+Inserting `luaotfload.define_font' at position 1 in `define_font'.
+Lua module: luaotfload-database 2020-02-02 3.12 luaotfload submodule / database
+Lua module: luaotfload-unicode 2020-02-02 3.12 luaotfload submodule / Unicode he
+lpers
+Lua module: luaotfload-colors 2020-02-02 3.12 luaotfload submodule / color
+Lua-only attribute luaotfload_color_attribute = 5
+Lua module: luaotfload-resolvers 2020-02-02 3.12 luaotfload submodule / resolver
+s
+luaotfload | conf : Root cache directory is C:/Users/Carson Brown/AppData/Local/
+MiKTeX/2.9/luatex-cache/generic-dev/names.
+Lua module: luaotfload-features 2020-02-02 3.12 luaotfload submodule / features
+Lua module: luaotfload-letterspace 2020-02-02 3.12 luaotfload submodule / color
+Lua module: luaotfload-embolden 2020-02-02 3.12 luaotfload submodule / color
+Lua module: luaotfload-notdef 2020-02-02 3.12 luaotfload submodule / color
+Lua module: luaotfload-auxiliary 2020-02-02 3.12 luaotfload submodule / auxiliar
+y functions
+Inserting `luaotfload.aux.set_sscale_dimens' at position 1 in `luaotfload.patch_
+font'.
+Inserting `luaotfload.aux.set_font_index' at position 2 in `luaotfload.patch_fon
+t'.
+Inserting `luaotfload.aux.patch_cambria_domh' at position 3 in `luaotfload.patch
+_font'.
+Inserting `luaotfload.aux.fixup_fontdata' at position 1 in `luaotfload.patch_fon
+t_unsafe'.
+Inserting `luaotfload.aux.set_capheight' at position 4 in `luaotfload.patch_font
+'.
+Inserting `luaotfload.aux.set_xheight' at position 5 in `luaotfload.patch_font'.
+Lua module: luaotfload-fallback 2020-02-02 3.12 luaotfload submodule / fallback
+Lua module: luaotfload-multiscript 2020-02-02 3.12 luaotfload submodule / multis
+cript
+Lua module: luaotfload-script 2020-02-02 3.12 luaotfload submodule / Script help
+ers
+Lua module: luaotfload-tounicode 2020-02-02 3.12 luaotfload submodule / tounicod
+e
+Inserting `luaotfload.rewrite_fontname' at position 6 in `luaotfload.patch_font'
+. L3 programming layer <2020-02-14>
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/latex/base/articl
+e.cls"
+Document Class: article 2019/12/20 v1.4l Standard LaTeX document class
+
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/latex/base/size12
+.clo"
+File: size12.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
+luaotfload | db : Font names database loaded from C:/Users/Carson Brown/AppData/
+Local/MiKTeX/2.9/luatex-cache/generic-dev/names/luaotfload-names.luc)
+\c@part=\count163
+\c@section=\count164
+\c@subsection=\count165
+\c@subsubsection=\count166
+\c@paragraph=\count167
+\c@subparagraph=\count168
+\c@figure=\count169
+\c@table=\count170
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen134
+)
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/latex/base/inpute
+nc.sty"
+Package: inputenc 2018/08/11 v1.3c Input encoding file
+\inpenc@prehook=\toks14
+\inpenc@posthook=\toks15
+
+
+Package inputenc Warning: inputenc package ignored with utf8 based engines.
+
+)
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/latex/amsmath/ams
+math.sty"
+Package: amsmath 2020/01/20 v2.17e AMS math features
+\@mathmargin=\skip49
+
+For additional information on amsmath, use the `?' option.
+
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/latex/amsmath/ams
+text.sty"
+Package: amstext 2000/06/29 v2.01 AMS text
+
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/latex/amsmath/ams
+gen.sty"
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks16
+\ex@=\dimen135
+))
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/latex/amsmath/ams
+bsy.sty"
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen136
+)
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/latex/amsmath/ams
+opn.sty"
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count171
+LaTeX Info: Redefining \frac on input line 227.
+\uproot@=\count172
+\leftroot@=\count173
+LaTeX Info: Redefining \overline on input line 389.
+\classnum@=\count174
+\DOTSCASE@=\count175
+LaTeX Info: Redefining \ldots on input line 486.
+LaTeX Info: Redefining \dots on input line 489.
+LaTeX Info: Redefining \cdots on input line 610.
+\Mathstrutbox@=\box45
+\strutbox@=\box46
+\big@size=\dimen137
+LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
+\macc@depth=\count176
+\c@MaxMatrixCols=\count177
+\dotsspace@=\muskip16
+\c@parentequation=\count178
+\dspbrk@lvl=\count179
+\tag@help=\toks17
+\row@=\count180
+\column@=\count181
+\maxfields@=\count182
+\andhelp@=\toks18
+\eqnshift@=\dimen138
+\alignsep@=\dimen139
+\tagshift@=\dimen140
+\tagwidth@=\dimen141
+\totwidth@=\dimen142
+\lineht@=\dimen143
+\@envbody=\toks19
+\multlinegap=\skip50
+\multlinetaggap=\skip51
+\mathdisplay@stack=\toks20
+LaTeX Info: Redefining \[ on input line 2859.
+LaTeX Info: Redefining \] on input line 2860.
+)
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/latex/amsfonts/am
+sfonts.sty"
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/latex/amsfonts/am
+ssymb.sty"
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+)
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/latex/sectsty/sec
+tsty.sty"
+Package: sectsty 2002/02/25 v2.0.2 Commands to change all sectional heading styl
+es
+
+
+LaTeX Warning: Command \underbar  has changed.
+               Check if current package is valid.
+
+
+LaTeX Warning: Command \underline  has changed.
+               Check if current package is valid.
+
+)
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/latex/base/textco
+mp.sty"
+Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
+)
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/latex/pdfpages/pd
+fpages.sty"
+Package: pdfpages 2020/01/28 v0.5q Insert pages of external PDF documents (AM)
+
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/latex/base/ifthen
+.sty"
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/latex/tools/calc.
+sty"
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count183
+\calc@Bcount=\count184
+\calc@Adimen=\dimen144
+\calc@Bdimen=\dimen145
+\calc@Askip=\skip52
+\calc@Bskip=\skip53
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count185
+\calc@Cskip=\skip54
+)
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/latex/eso-pic/eso
+-pic.sty"
+Package: eso-pic 2018/04/12 v2.0h eso-pic (RN)
+
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/generic/atbegshi/
+atbegshi.sty"
+Package: atbegshi 2019/12/05 v1.19 At begin shipout hook (HO)
+
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/generic/infwarerr
+/infwarerr.sty"
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/generic/ltxcmds/l
+txcmds.sty"
+Package: ltxcmds 2019/12/15 v1.24 LaTeX kernel commands for general use (HO)
+)
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/generic/iftex/ift
+ex.sty"
+Package: iftex 2019/11/07 v1.0c TeX engine tests
+))
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/latex/graphics/ke
+yval.sty"
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks21
+)
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/latex/xcolor/xcol
+or.sty"
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/latex/graphics-cf
+g/color.cfg"
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: luatex.def on input line 225.
+
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/latex/graphics-de
+f/luatex.def"
+File: luatex.def 2018/01/08 v1.0l Graphics/color driver for luatex
+)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+))
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/latex/graphics/gr
+aphicx.sty"
+Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/latex/graphics/gr
+aphics.sty"
+Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
+
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/latex/graphics/tr
+ig.sty"
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/latex/graphics-cf
+g/graphics.cfg"
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: luatex.def on input line 105.
+)
+\Gin@req@height=\dimen146
+\Gin@req@width=\dimen147
+)
+\AM@pagewidth=\dimen148
+\AM@pageheight=\dimen149
+
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/latex/pdfpages/pp
+luatex.def"
+File: ppluatex.def 2020/01/28 v0.5q Pdfpages driver for LuaTeX (AM)
+)
+\AM@pagebox=\box47
+\AM@global@opts=\toks22
+\AM@pagecnt=\count186
+\AM@toc@title=\toks23
+\c@AM@survey=\count187
+\AM@templatesizebox=\box48
+)
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/latex/hyperref/hy
+perref.sty"
+Package: hyperref 2020/01/14 v7.00d Hypertext links for LaTeX
+
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/latex/pdftexcmds/
+pdftexcmds.sty"
+Package: pdftexcmds 2019/11/24 v0.31 Utility functions of pdfTeX for LuaTeX (HO)
+
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+\pdftexcmds@toks=\toks24
+)
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/generic/kvsetkeys
+/kvsetkeys.sty"
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+)
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/generic/kvdefinek
+eys/kvdefinekeys.sty"
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pdfescape
+/pdfescape.sty"
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+)
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/latex/hycolor/hyc
+olor.sty"
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/latex/letltxmacro
+/letltxmacro.sty"
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+)
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/latex/auxhook/aux
+hook.sty"
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+)
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/latex/kvoptions/k
+voptions.sty"
+Package: kvoptions 2019/11/29 v3.13 Key value format for package options (HO)
+)
+\@linkdim=\dimen150
+\Hy@linkcounter=\count188
+\Hy@pagecounter=\count189
+
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/latex/hyperref/pd
+1enc.def"
+File: pd1enc.def 2020/01/14 v7.00d Hyperref: PDFDocEncoding definition (HO)
+)
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/generic/intcalc/i
+ntcalc.sty"
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/generic/etexcmds/
+etexcmds.sty"
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+\Hy@SavedSpaceFactor=\count190
+Package hyperref Info: Option `final' set `true' on input line 4421.
+Package hyperref Info: Hyper figures OFF on input line 4547.
+Package hyperref Info: Link nesting OFF on input line 4552.
+Package hyperref Info: Hyper index ON on input line 4555.
+Package hyperref Info: Plain pages OFF on input line 4562.
+Package hyperref Info: Backreferencing OFF on input line 4567.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4800.
+\c@Hy@tempcnt=\count191
+
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/latex/url/url.sty
+"
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 5159.
+\XeTeXLinkMargin=\dimen151
+
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/generic/bitset/bi
+tset.sty"
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/generic/bigintcal
+c/bigintcalc.sty"
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
+
+))
+\Fld@menulength=\count192
+\Field@Width=\dimen152
+\Fld@charsize=\dimen153
+Package hyperref Info: Hyper figures OFF on input line 6430.
+Package hyperref Info: Link nesting OFF on input line 6435.
+Package hyperref Info: Hyper index ON on input line 6438.
+Package hyperref Info: backreferencing OFF on input line 6445.
+Package hyperref Info: Link coloring OFF on input line 6450.
+Package hyperref Info: Link coloring with OCG OFF on input line 6455.
+Package hyperref Info: PDF/A mode OFF on input line 6460.
+LaTeX Info: Redefining \ref on input line 6500.
+LaTeX Info: Redefining \pageref on input line 6504.
+\Hy@abspage=\count193
+\c@Item=\count194
+\c@Hfootnote=\count195
+)
+Package hyperref Info: Driver (autodetected): hluatex.
+
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/latex/hyperref/hl
+uatex.def"
+File: hluatex.def 2020/01/14 v7.00d Hyperref driver for luaTeX
+
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/latex/hyperref/pu
+enc.def"
+File: puenc.def 2020/01/14 v7.00d Hyperref: PDF Unicode definition (HO)
+)
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/generic/stringenc
+/stringenc.sty"
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO)
+
+)
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/latex/atveryend/a
+tveryend.sty"
+Package: atveryend 2019-12-11 v1.11 Hooks at the very end of document (HO)
+Package atveryend Info: \enddocument detected (standard20110627).
+)
+\Fld@listcount=\count196
+\c@bookmark@seq@number=\count197
+
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/latex/rerunfilech
+eck/rerunfilecheck.sty"
+Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
+
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/generic/uniquecou
+nter/uniquecounter.sty"
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
+6.
+)
+\Hy@SectionHShift=\skip55
+)
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/latex/enumitem/en
+umitem.sty"
+Package: enumitem 2019/06/20 v3.9 Customized lists
+\labelindent=\skip56
+\enit@outerparindent=\dimen154
+\enit@toks=\toks25
+\enit@inbox=\box49
+\enit@count@id=\count198
+\enitdp@description=\count199
+)
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/latex/tools/multi
+col.sty"
+Package: multicol 2019/12/09 v1.8y multicolumn formatting (FMi)
+\c@tracingmulticols=\count266
+\mult@box=\box50
+\multicol@leftmargin=\dimen155
+\c@unbalance=\count267
+\c@collectmore=\count268
+\doublecol@number=\count269
+\multicoltolerance=\count270
+\multicolpretolerance=\count271
+\full@width=\dimen156
+\page@free=\dimen157
+\premulticols=\dimen158
+\postmulticols=\dimen159
+\multicolsep=\skip57
+\multicolbaselineskip=\skip58
+\partial@page=\box51
+\last@line=\box52
+\maxbalancingoverflow=\dimen160
+\mult@rightbox=\box53
+\mult@grightbox=\box54
+\mult@gfirstbox=\box55
+\mult@firstbox=\box56
+\@tempa=\box57
+\@tempa=\box58
+\@tempa=\box59
+\@tempa=\box60
+\@tempa=\box61
+\@tempa=\box62
+\@tempa=\box63
+\@tempa=\box64
+\@tempa=\box65
+\@tempa=\box66
+\@tempa=\box67
+\@tempa=\box68
+\@tempa=\box69
+\@tempa=\box70
+\@tempa=\box71
+\@tempa=\box72
+\@tempa=\box73
+\@tempa=\box74
+\@tempa=\box75
+\@tempa=\box76
+\@tempa=\box77
+\@tempa=\box78
+\@tempa=\box79
+\@tempa=\box80
+\@tempa=\box81
+\@tempa=\box82
+\@tempa=\box83
+\@tempa=\box84
+\@tempa=\box85
+\@tempa=\box86
+\@tempa=\box87
+\@tempa=\box88
+\@tempa=\box89
+\@tempa=\box90
+\@tempa=\box91
+\@tempa=\box92
+\@tempa=\box93
+\c@minrows=\count272
+\c@columnbadness=\count273
+\c@finalcolumnbadness=\count274
+\last@try=\dimen161
+\multicolovershoot=\dimen162
+\multicolundershoot=\dimen163
+\mult@nat@firstbox=\box94
+\colbreak@box=\box95
+\mc@col@check@num=\count275
+)
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/latex/forest/fore
+st.sty"
+Package: forest 2017/07/14 v2.1.5 Drawing (linguistic) trees
+
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/latex/pgf/fronten
+dlayer/tikz.sty"
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/latex/pgf/basicla
+yer/pgf.sty"
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/latex/pgf/utiliti
+es/pgfrcs.sty"
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/utili
+ties/pgfutil-common.tex"
+\pgfutil@everybye=\toks26
+\pgfutil@tempdima=\dimen164
+\pgfutil@tempdimb=\dimen165
+
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/utili
+ties/pgfutil-common-lists.tex"))
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/utili
+ties/pgfutil-latex.def"
+\pgfutil@abb=\box96
+
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/latex/ms/everyshi
+.sty"
+Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
+))
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/utili
+ties/pgfrcs.code.tex"
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/pgf.r
+evision.tex")
+Package: pgfrcs 2020/01/08 v3.1.5b (3.1.5b)
+))
+Package: pgf 2020/01/08 v3.1.5b (3.1.5b)
+
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/latex/pgf/basicla
+yer/pgfcore.sty"
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/latex/pgf/systeml
+ayer/pgfsys.sty"
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/syste
+mlayer/pgfsys.code.tex"
+Package: pgfsys 2020/01/08 v3.1.5b (3.1.5b)
+
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/utili
+ties/pgfkeys.code.tex"
+\pgfkeys@pathtoks=\toks27
+\pgfkeys@temptoks=\toks28
+
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/utili
+ties/pgfkeysfiltered.code.tex"
+\pgfkeys@tmptoks=\toks29
+))
+\pgf@x=\dimen166
+\pgf@y=\dimen167
+\pgf@xa=\dimen168
+\pgf@ya=\dimen169
+\pgf@xb=\dimen170
+\pgf@yb=\dimen171
+\pgf@xc=\dimen172
+\pgf@yc=\dimen173
+\pgf@xd=\dimen174
+\pgf@yd=\dimen175
+\w@pgf@writea=\write3
+\r@pgf@reada=\read2
+\c@pgf@counta=\count276
+\c@pgf@countb=\count277
+\c@pgf@countc=\count278
+\c@pgf@countd=\count279
+\t@pgf@toka=\toks30
+\t@pgf@tokb=\toks31
+\t@pgf@tokc=\toks32
+\pgf@sys@id@count=\count280
+
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/syste
+mlayer/pgf.cfg"
+File: pgf.cfg 2020/01/08 v3.1.5b (3.1.5b)
+)
+Driver file for pgf: pgfsys-luatex.def
+
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/syste
+mlayer/pgfsys-luatex.def"
+File: pgfsys-luatex.def 2020/01/08 v3.1.5b (3.1.5b)
+
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/syste
+mlayer/pgfsys-common-pdf.def"
+File: pgfsys-common-pdf.def 2020/01/08 v3.1.5b (3.1.5b)
+)))
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/syste
+mlayer/pgfsyssoftpath.code.tex"
+File: pgfsyssoftpath.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfsyssoftpath@smallbuffer@items=\count281
+\pgfsyssoftpath@bigbuffer@items=\count282
+)
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/syste
+mlayer/pgfsysprotocol.code.tex"
+File: pgfsysprotocol.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+))
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/basic
+layer/pgfcore.code.tex"
+Package: pgfcore 2020/01/08 v3.1.5b (3.1.5b)
+
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/math/
+pgfmath.code.tex"
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/math/
+pgfmathcalc.code.tex"
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/math/
+pgfmathutil.code.tex")
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/math/
+pgfmathparser.code.tex"
+\pgfmath@dimen=\dimen176
+\pgfmath@count=\count283
+\pgfmath@box=\box97
+\pgfmath@toks=\toks33
+\pgfmath@stack@operand=\toks34
+\pgfmath@stack@operation=\toks35
+)
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/math/
+pgfmathfunctions.code.tex"
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/math/
+pgfmathfunctions.basic.code.tex")
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/math/
+pgfmathfunctions.trigonometric.code.tex")
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/math/
+pgfmathfunctions.random.code.tex")
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/math/
+pgfmathfunctions.comparison.code.tex")
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/math/
+pgfmathfunctions.base.code.tex")
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/math/
+pgfmathfunctions.round.code.tex")
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/math/
+pgfmathfunctions.misc.code.tex")
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/math/
+pgfmathfunctions.integerarithmetics.code.tex")))
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/math/
+pgfmathfloat.code.tex"
+\c@pgfmathroundto@lastzeros=\count284
+))
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/math/
+pgfint.code.tex")
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/basic
+layer/pgfcorepoints.code.tex"
+File: pgfcorepoints.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@picminx=\dimen177
+\pgf@picmaxx=\dimen178
+\pgf@picminy=\dimen179
+\pgf@picmaxy=\dimen180
+\pgf@pathminx=\dimen181
+\pgf@pathmaxx=\dimen182
+\pgf@pathminy=\dimen183
+\pgf@pathmaxy=\dimen184
+\pgf@xx=\dimen185
+\pgf@xy=\dimen186
+\pgf@yx=\dimen187
+\pgf@yy=\dimen188
+\pgf@zx=\dimen189
+\pgf@zy=\dimen190
+)
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/basic
+layer/pgfcorepathconstruct.code.tex"
+File: pgfcorepathconstruct.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@path@lastx=\dimen191
+\pgf@path@lasty=\dimen192
+)
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/basic
+layer/pgfcorepathusage.code.tex"
+File: pgfcorepathusage.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@shorten@end@additional=\dimen193
+\pgf@shorten@start@additional=\dimen194
+)
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/basic
+layer/pgfcorescopes.code.tex"
+File: pgfcorescopes.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfpic=\box98
+\pgf@hbox=\box99
+\pgf@layerbox@main=\box100
+\pgf@picture@serial@count=\count285
+)
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/basic
+layer/pgfcoregraphicstate.code.tex"
+File: pgfcoregraphicstate.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgflinewidth=\dimen195
+)
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/basic
+layer/pgfcoretransformations.code.tex"
+File: pgfcoretransformations.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@pt@x=\dimen196
+\pgf@pt@y=\dimen197
+\pgf@pt@temp=\dimen198
+)
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/basic
+layer/pgfcorequick.code.tex"
+File: pgfcorequick.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/basic
+layer/pgfcoreobjects.code.tex"
+File: pgfcoreobjects.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/basic
+layer/pgfcorepathprocessing.code.tex"
+File: pgfcorepathprocessing.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/basic
+layer/pgfcorearrows.code.tex"
+File: pgfcorearrows.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfarrowsep=\dimen199
+)
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/basic
+layer/pgfcoreshade.code.tex"
+File: pgfcoreshade.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@max=\dimen256
+\pgf@sys@shading@range@num=\count286
+\pgf@shadingcount=\count287
+)
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/basic
+layer/pgfcoreimage.code.tex"
+File: pgfcoreimage.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/basic
+layer/pgfcoreexternal.code.tex"
+File: pgfcoreexternal.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfexternal@startupbox=\box101
+))
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/basic
+layer/pgfcorelayers.code.tex"
+File: pgfcorelayers.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/basic
+layer/pgfcoretransparency.code.tex"
+File: pgfcoretransparency.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/basic
+layer/pgfcorepatterns.code.tex"
+File: pgfcorepatterns.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/basic
+layer/pgfcorerdf.code.tex"
+File: pgfcorerdf.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)))
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/modul
+es/pgfmoduleshapes.code.tex"
+File: pgfmoduleshapes.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfnodeparttextbox=\box102
+)
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/modul
+es/pgfmoduleplot.code.tex"
+File: pgfmoduleplot.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/latex/pgf/compati
+bility/pgfcomp-version-0-65.sty"
+Package: pgfcomp-version-0-65 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@nodesepstart=\dimen257
+\pgf@nodesepend=\dimen258
+)
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/latex/pgf/compati
+bility/pgfcomp-version-1-18.sty"
+Package: pgfcomp-version-1-18 2020/01/08 v3.1.5b (3.1.5b)
+))
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/latex/pgf/utiliti
+es/pgffor.sty"
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/latex/pgf/utiliti
+es/pgfkeys.sty"
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/utili
+ties/pgfkeys.code.tex"))
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/latex/pgf/math/pg
+fmath.sty"
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/math/
+pgfmath.code.tex"))
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/utili
+ties/pgffor.code.tex"
+Package: pgffor 2020/01/08 v3.1.5b (3.1.5b)
+
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/math/
+pgfmath.code.tex")
+\pgffor@iter=\dimen259
+\pgffor@skip=\dimen260
+\pgffor@stack=\toks36
+\pgffor@toks=\toks37
+))
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/front
+endlayer/tikz/tikz.code.tex"
+Package: tikz 2020/01/08 v3.1.5b (3.1.5b)
+
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/libra
+ries/pgflibraryplothandlers.code.tex"
+File: pgflibraryplothandlers.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@plot@mark@count=\count288
+\pgfplotmarksize=\dimen261
+)
+\tikz@lastx=\dimen262
+\tikz@lasty=\dimen263
+\tikz@lastxsaved=\dimen264
+\tikz@lastysaved=\dimen265
+\tikz@lastmovetox=\dimen266
+\tikz@lastmovetoy=\dimen267
+\tikzleveldistance=\dimen268
+\tikzsiblingdistance=\dimen269
+\tikz@figbox=\box103
+\tikz@figbox@bg=\box104
+\tikz@tempbox=\box105
+\tikz@tempbox@bg=\box106
+\tikztreelevel=\count289
+\tikznumberofchildren=\count290
+\tikznumberofcurrentchild=\count291
+\tikz@fig@count=\count292
+
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/modul
+es/pgfmodulematrix.code.tex"
+File: pgfmodulematrix.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfmatrixcurrentrow=\count293
+\pgfmatrixcurrentcolumn=\count294
+\pgf@matrix@numberofcolumns=\count295
+)
+\tikz@expandcount=\count296
+
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/front
+endlayer/tikz/libraries/tikzlibrarytopaths.code.tex"
+File: tikzlibrarytopaths.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)))
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/front
+endlayer/tikz/libraries/tikzlibraryshapes.code.tex"
+File: tikzlibraryshapes.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/front
+endlayer/tikz/libraries/tikzlibraryshapes.geometric.code.tex"
+File: tikzlibraryshapes.geometric.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/libra
+ries/shapes/pgflibraryshapes.geometric.code.tex"
+File: pgflibraryshapes.geometric.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+))
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/front
+endlayer/tikz/libraries/tikzlibraryshapes.misc.code.tex"
+File: tikzlibraryshapes.misc.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/libra
+ries/shapes/pgflibraryshapes.misc.code.tex"
+File: pgflibraryshapes.misc.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+))
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/front
+endlayer/tikz/libraries/tikzlibraryshapes.symbols.code.tex"
+File: tikzlibraryshapes.symbols.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/libra
+ries/shapes/pgflibraryshapes.symbols.code.tex"
+File: pgflibraryshapes.symbols.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+))
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/front
+endlayer/tikz/libraries/tikzlibraryshapes.arrows.code.tex"
+File: tikzlibraryshapes.arrows.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/libra
+ries/shapes/pgflibraryshapes.arrows.code.tex"
+File: pgflibraryshapes.arrows.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+))
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/front
+endlayer/tikz/libraries/tikzlibraryshapes.callouts.code.tex"
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/libra
+ries/shapes/pgflibraryshapes.callouts.code.tex"))
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/front
+endlayer/tikz/libraries/tikzlibraryshapes.multipart.code.tex"
+File: tikzlibraryshapes.multipart.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/libra
+ries/shapes/pgflibraryshapes.multipart.code.tex"
+File: pgflibraryshapes.multipart.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfnodepartlowerbox=\box107
+\pgfnodeparttwobox=\box108
+\pgfnodepartthreebox=\box109
+\pgfnodepartfourbox=\box110
+\pgfnodeparttwentybox=\box111
+\pgfnodepartnineteenbox=\box112
+\pgfnodeparteighteenbox=\box113
+\pgfnodepartseventeenbox=\box114
+\pgfnodepartsixteenbox=\box115
+\pgfnodepartfifteenbox=\box116
+\pgfnodepartfourteenbox=\box117
+\pgfnodepartthirteenbox=\box118
+\pgfnodeparttwelvebox=\box119
+\pgfnodepartelevenbox=\box120
+\pgfnodeparttenbox=\box121
+\pgfnodepartninebox=\box122
+\pgfnodeparteightbox=\box123
+\pgfnodepartsevenbox=\box124
+\pgfnodepartsixbox=\box125
+\pgfnodepartfivebox=\box126
+)))
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/front
+endlayer/tikz/libraries/tikzlibraryfit.code.tex"
+File: tikzlibraryfit.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/front
+endlayer/tikz/libraries/tikzlibrarycalc.code.tex"
+File: tikzlibrarycalc.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/libra
+ries/pgflibraryintersections.code.tex"
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/libra
+ries/pgflibraryfpu.code.tex")
+\pgf@intersect@solutions=\count297
+)
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/latex/pgfopts/pgf
+opts.sty"
+Package: pgfopts 2014/07/10 v2.1a LaTeX package options with pgfkeys
+\pgfopts@list@add@a@toks=\toks38
+\pgfopts@list@add@b@toks=\toks39
+)
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/latex/etoolbox/et
+oolbox.sty"
+Package: etoolbox 2019/09/21 v2.5h e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count298
+)
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/latex/elocalloc/e
+localloc.sty"
+Package: elocalloc 2016/12/15 v0.03 local allocation for LaTeX 2015+ (DPC)
+)
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/latex/environ/env
+iron.sty"
+Package: environ 2014/05/04 v0.3 A new way to define environments
+
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/latex/trimspaces/
+trimspaces.sty"
+Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
+))
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/latex/l3packages/
+xparse/xparse.sty"
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/latex/l3kernel/ex
+pl3.sty"
+Package: expl3 2020-02-14 L3 programming layer (loader) 
+
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/latex/l3backend/l
+3backend-pdfmode.def"
+File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
+\l__kernel_color_stack_int=\count299
+\l__pdf_internal_box=\box127
+))
+Package: xparse 2020-02-14 L3 Experimental document command parser
+\l__xparse_current_arg_int=\count300
+\g__xparse_grabber_int=\count301
+\l__xparse_m_args_int=\count302
+\l__xparse_v_nesting_int=\count303
+)
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/latex/inlinedef/i
+nlinedef.sty"
+Package: inlinedef 2008/07/10 v1.0 Inlined expansions within definitions
+\ID@toks=\toks40
+\ID@count=\count304
+)
+\ID@usercommands=\toks41
+\safeloop@depth=\count305
+\safeRKloop@depth=\count306
+\forest@temp@dimen=\dimen270
+\forest@temp@count=\count307
+\forest@n=\count308
+\forest@temp@global@count=\count309
+\forest@temp@toks=\toks42
+\forest@temparray@M=\count310
+\forest@temparray@N=\count311
+\forest@global@temparray@M=\count312
+\forest@global@temparray@N=\count313
+\forest@isnum@count=\count314
+\forest@isdim@nonintpart=\count315
+\forest@isdim@dimen=\dimen271
+\forest@sort@m=\count316
+\forest@sort@k=\count317
+\forest@sort@p=\count318
+\bracket@content=\toks43
+\bracket@afterthought=\toks44
+\forest@node@maxid=\count319
+\forest@process@left@M=\count320
+\forest@process@left@N=\count321
+\forest@process@right@M=\count322
+\forest@process@right@N=\count323
+\forest@process@saved@M=\count324
+\forest@process@saved@N=\count325
+\forest@process@result@M=\count326
+\forest@process@result@N=\count327
+\forest@process@n=\count328
+\forest@nodewalk@branch@toks=\toks45
+\forest@nodewalk@shortsteps@resolution=\toks46
+\forest@do@dynamics=\toks47
+\forest@box=\box128
+\forest@xg=\dimen272
+\forest@yg=\dimen273
+\forest@xs=\dimen274
+\forest@ys=\dimen275
+\forest@pi@toks=\toks48
+\forest@segment@toks=\toks49
+\forest@PIi@toks=\toks50
+\forest@PIii@toks=\toks51
+\forest@copy@in=\read3
+\forest@copy@out=\write4
+\forest@externalize@max@outer@n=\count329
+\forest@externalize@inner@n=\count330
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 22.
+ (./Report.aux)
+\openout1 = Report.aux
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 27.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 27
+.
+
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/latex/base/ts1cmr
+.fd"
+File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+\AtBeginShipoutBox=\box129
+
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/context/base/mkii
+/supp-pdf.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count331
+\scratchdimen=\dimen276
+\scratchbox=\box130
+\nofMPsegments=\count332
+\nofMParguments=\count333
+\everyMPshowfont=\toks52
+\MPscratchCnt=\count334
+\MPscratchDim=\dimen277
+\MPnumerator=\count335
+\makeMPintoPDFobject=\count336
+\everyMPtoPDFconversion=\toks53
+)
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/latex/epstopdf-pk
+g/epstopdf-base.sty"
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
+5.
+)
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/latex/pdflscape/p
+dflscape.sty"
+Package: pdflscape 2019/12/05 v0.12 Display of landscape pages in PDF (HO)
+
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/latex/graphics/ls
+cape.sty"
+Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
+)
+Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
+)
+Package hyperref Info: Link coloring ON on input line 27.
+
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/latex/hyperref/na
+meref.sty"
+Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
+
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/latex/refcount/re
+fcount.sty"
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/generic/gettitles
+tring/gettitlestring.sty"
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count337
+)
+LaTeX Info: Redefining \ref on input line 27.
+LaTeX Info: Redefining \pageref on input line 27.
+LaTeX Info: Redefining \nameref on input line 27.
+ (./Report.out) (./Report.out)
+\@outlinefile=\write5
+
+\openout5 = Report.out
+
+ABD: EveryShipout initializing macros
+
+./Report.tex:31: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.31 \author
+          {180000269, 180008859, 180021978 Tutor: Stephen Linton}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+LaTeX Font Info:    Trying to load font information for U+msa on input line 34.
+
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/latex/amsfonts/um
+sa.fd"
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 34.
+
+("C:/Users/Carson Brown/AppData/Local/Programs/MiKTeX 2.9/tex/latex/amsfonts/um
+sb.fd"
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+./Report.tex:40: Undefined control sequence.
+l.40 ... first steps, which can be executed in \code
+                                                   {cleanData.py}.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Report.tex:42: Undefined control sequence.
+l.42 ...l descriptive analysis is performed in \code
+                                                   {analysis.py}. Finally, a...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Report.tex:45: Undefined control sequence.
+l.45 ... is split into two distinct functions, \code
+                                                   {checkData} to check if t...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Report.tex:45: Undefined control sequence.
+l.45 ...ata} to check if the data is valid and \code
+                                                   {refineData} to refine th...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Report.tex:51: Undefined control sequence.
+l.51 N.B. running \code
+                      {analysis.py} on its own does not produce cleaned .tsv...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Report.tex:51: Undefined control sequence.
+l.51 ...n cleaned version of raw data, execute \code
+                                                   {cleanData.py}.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[1
+
+{C:/Users/Carson Brown/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+Overfull \hbox (11.92018pt too wide) in paragraph at lines 83--84
+[]\TU/lmr/m/n/12 Cal-cu-late an av-er-age num-ber of days since ci-ta-tion ap-p
+eared on Wikipedia 
+ []
+
+[2]
+./Report.tex:104: Undefined control sequence.
+l.104 ...t way to parse ISO 8601 format in the \code
+                                                  {read\_csv} stage.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Report.tex:105: Undefined control sequence.
+l.105 In fact, one of the parameter of \code
+                                          {read\_csv}, \code{parse\_dates}, ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Report.tex:105: Undefined control sequence.
+l.105 ...of the parameter of \code{read\_csv}, \code
+                                                  {parse\_dates}, specially ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Report.tex:107: Undefined control sequence.
+l.107 ...rmance Pandas function usage includes \code
+                                                  {groupby} and \code{value\...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Report.tex:107: Undefined control sequence.
+l.107 ...ion usage includes \code{groupby} and \code
+                                                  {value\_counts}. On the on...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Report.tex:107: Undefined control sequence.
+l.107 ...code{value\_counts}. On the one hand, \code
+                                                  {groupby} has been efficie...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Report.tex:108: Undefined control sequence.
+l.108 On the other hand, \code
+                            {value\_counts} focuses on finding frequencies o...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (6.35619pt too wide) in paragraph at lines 107--109
+[]\TU/lmr/m/n/12 Other im-por-tant high per-for-mance Pan-das func-tion us-age 
+in-cludes groupby
+ []
+
+./Report.tex:110: Undefined control sequence.
+l.110 Moreover, Pandas \code
+                          {.apply()} function, which is a powerful replaceme...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Report.tex:112: Undefined control sequence.
+l.112 ...compromising the rest of the data the \code
+                                                   {checkData} function prin...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Report.tex:114: Undefined control sequence.
+l.114 The \code
+             {refineData} function removes and illegal and duplicate values ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Report.tex:116: Undefined control sequence.
+l.116 ...base and additional requirements. Our \code
+                                                  {.apply()} takes another f...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[3] [4]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 152.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 152.
+ (./Report.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 152.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 152.
+Package rerunfilecheck Info: File `Report.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 152.
+)
+
+Here is how much of LuaTeX's memory you used:
+ 32351 strings out of 481384
+ 100000,1144653 words of node,token memory allocated
+ 530 words of node memory still in use:
+   6 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 8 attribute, 59 glue_spec,
+ 8 attribute_list, 2 write nodes
+   avail lists: 2:359,3:107,4:39,5:175,6:30,7:2917,8:9,9:135,10:4,11:195
+ 48505 multiletter control sequences out of 65536+200000
+ 49 fonts using 5165387 bytes
+ 67i,7n,71p,1593b,337s stack positions out of 5000i,500n,10000p,200000b,50000s
+<c:/users/carson brown/appdata/local/programs/miktex 2.9/fonts/opentype/public/l
+m/lmroman12-italic.otf><c:/users/carson brown/appdata/local/programs/miktex 2.9/
+fonts/opentype/public/lm/lmroman12-bold.otf><c:/users/carson brown/appdata/local
+/programs/miktex 2.9/fonts/opentype/public/lm/lmroman12-regular.otf><c:/users/ca
+rson brown/appdata/local/programs/miktex 2.9/fonts/opentype/public/lm/lmroman17-
+regular.otf>
+Output written on Report.pdf (4 pages, 35686 bytes).
+
+PDF statistics: 69 PDF objects out of 1000 (max. 8388607)
+ 14 named destinations out of 1000 (max. 131072)
+ 16 words of extra memory for PDF output out of 10000 (max. 100000000)
+
