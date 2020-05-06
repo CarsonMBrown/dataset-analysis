@@ -42,7 +42,7 @@ Before starting detailed analysis of each language, verification and pre-process
 After raw data has been read in correctly and cleaned, initial descriptive analysis is performed. Finally, additional analytics are performed to explore the data further.
 
 \section*{Design}
-Pre-processing raw data ... (TODO: cleandata.py structure)
+Pre-processing raw data is split into two distinct functions, 'checkData' to check if the data is valid and 'refineData' to refine the data further.
 
 Analytics take form in modular functions, using pandas dataframe as parameter, and results of analysis are outputted in a series of print statements.
 
@@ -109,7 +109,9 @@ Other important high performance Pandas function usage includes \code{groupby} a
 
 Moreover, Pandas \code{.apply()} function, which is a powerful replacement of iterative functions, has been used in Hard extensions.
 
-(TODO: add more details with function choices and its optimisation level)
+If any illegal values in the data can not be removed or amended without compromising the rest of the data the 'checkData' function prints an error message and exits the program.
+
+The 'refineData' function removes and illegal and duplicate values to ensure there are not inconsistencies with the analysis.
 
 Overall, we are very happy with the progress and completeness of our solution to both the base and additional requirements. Our \code{.apply()} takes another function as its input and applies it along an axis of a DataFrame.
 In such cases where we are passing functions, a lambda is often convenient to package everything together in an optimised manner.
