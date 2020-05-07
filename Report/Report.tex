@@ -43,12 +43,12 @@ After raw data has been read in correctly and cleaned, initial descriptive analy
 
 \section*{Design}
 Pre-processing raw data is split into two distinct functions, \code {checkData} to check if the data is valid and \code {refineData} to refine the data further.
+Prior to analysis, refine data is saved to a new .tsv file. 
 
 Analytics take form in modular functions, using pandas dataframe as parameter, and results of analysis are outputted in a series of print statements.
 
 Extension work has been designed similarly as modular functions, runs in series after initial analysis.
 
-N.B. running \code {analysis.py} on its own does not produce cleaned .tsv file. To obtain cleaned version of raw data, execute \code {cleanData.py}.
 \subsection*{Base Specifications}
 
 The minimum requirements of this project were to implement the parts which were currently undefined
