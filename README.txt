@@ -9,3 +9,5 @@ example:
 
 INFO:
     Python does not like to pipe input to a file when the input file is not in ascii encoding. This is pythons problem, not our programs.
+
+use "pip3 install --user pandas" to install pandas

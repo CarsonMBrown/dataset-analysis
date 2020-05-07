@@ -1,0 +1,120 @@
+Reading From: zhwiki.tsv
+1 Lines with mismatched pmid removed
+3677 Lines with mismatched isbn removed
+There are 0 Duplicate Rows in the Data
+
+--- Beginning of Initial Analysis ---
+
+Number of records: 357230
+
+The Range of Dates Represented in the Data:
+        Earliest date (ns, UTC): 2003-01-03 07:11:49+00:00
+        Earliest date: 2003-01-03
+        Latest date (ns, UTC): 2018-03-02 10:44:29+00:00
+        Latest date: 2018-03-02
+
+Records By Type:
+        Record type  Record count
+               isbn        261179
+                doi         59667
+               pmid         26217
+                pmc          5390
+              arxiv          4777
+
+--- End of Initial Analysis ---
+
+--- Beginning of Easy Extensions ---
+
+Percent of Records for Each Citation Type:
+        Record type Percentage %
+               isbn         73.1
+                doi         16.7
+               pmid          7.3
+                pmc          1.5
+              arxiv          1.3
+
+The Average Number Of Days Since A Citation Was Added Is: 1264
+
+Number Of ArXiv Citations By Year:
+        2012    865
+        2016    769
+        2017    680
+        2015    602
+        2014    571
+        2013    509
+        2018    278
+        2011    176
+        2010    122
+        2008     87
+        2009     62
+        2007     36
+        2006     16
+        2005      3
+        2004      1
+
+--- End of Easy Extensions ---
+
+--- Beginning of Medium Extensions ---
+
+Average Citations:
+        Mean:   3.806961081034997
+        Median: 2.0
+
+Number of Citations from Zenodo:
+        Sorted by Number of Citations:
+         Year  Number of Zenodo cited
+         2017                       3
+
+        Sorted by Year of Appearance:
+         Year  Number of Zenodo cited
+         2017                       3
+
+The First 10 Pages Citing The Largest Number of Sources Are:
+        络丝蛋白
+        流行性感冒
+        疟疾
+        注意力不足過動症
+        火影忍者
+        肥胖症
+        精神分裂症
+        ONE PIECE漫画单行本列表
+        银魂
+        苯丙胺
+
+--- End of Medium Extensions ---
+
+--- Beginning of Hard Extensions ---
+
+The 10 Most Cited Sources Are:
+        ISBN 9787307070431        7843
+        ISBN 9787552623208        7738
+        ISBN 7806188819           1529
+        DOI 10.1007/BF00171763    1422
+        ISBN 9780521815284        1418
+        ISBN 9780913135174        1417
+        ISBN 9780304354696        1416
+        ISBN 9780486209173        1415
+        ISBN 9780521335003        1415
+        ISBN 9780936389271        1415
+
+The Number and Percentage of Citations Added Per Year:
+               Citations  Percentage
+        Years
+        2003          17    0.004759
+        2004         100    0.027993
+        2005         877    0.245500
+        2006        2128    0.595695
+        2007        6595    1.846150
+        2008        8976    2.512667
+        2009       11732    3.284159
+        2010       15088    4.223609
+        2011       17974    5.031492
+        2012       27525    7.705120
+        2013       31387    8.786216
+        2014       40720   11.398819
+        2015       41807   11.703104
+        2016       56366   15.778630
+        2017       80857   22.634437
+        2018       15081    4.221650
+
+--- End of Hard Extensions ---
