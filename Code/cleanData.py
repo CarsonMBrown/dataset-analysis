@@ -11,8 +11,14 @@ def main():
         if data is not None:
             checkData(data)
             data = refineData(data)
-            data.to_csv(arg + "Clean.tsv", sep="\t", index=False)
+            saveData(arg, data)
 
+
+def saveData(dataName, data):
+    """
+    Saves the data to file
+    """
+    data.to_csv(dataName + "Clean.tsv", sep="\t", index=False)
 
 def checkData(data):
     """

@@ -12,6 +12,7 @@ def main():
         if data is not None:
             cleanData.checkData(data)
             data = cleanData.refineData(data)
+            cleanData.saveData(arg, data)
 
             print("\n--- Beginning of Initial Analysis ---\n")
 

@@ -5,7 +5,7 @@ There are 0 Duplicate Rows in the Data
 
 --- Beginning of Initial Analysis ---
 
-Number of records: 225054
+Number of records: 222656
 
 The Range of Dates Represented in the Data:
         Earliest date (ns, UTC): 2004-04-14 11:49:23+00:00
@@ -14,26 +14,26 @@ The Range of Dates Represented in the Data:
         Latest date: 2018-03-01
 
 Records By Type:
-          Record type  Record count
-        0        isbn        140596
-        1         doi         71246
-        2        pmid          9304
-        3       arxiv          2223
-        4         pmc          1685
+        Record type  Record count
+               isbn        138199
+                doi         71246
+               pmid          9303
+              arxiv          2223
+                pmc          1685
 
 --- End of Initial Analysis ---
 
 --- Beginning of Easy Extensions ---
 
 Percent of Records for Each Citation Type:
-          Record type Percentage %
-        0        isbn         62.5
-        1         doi         31.7
-        2        pmid          4.1
-        3       arxiv          1.0
-        4         pmc          0.7
+        Record type Percentage %
+               isbn         62.1
+                doi         32.0
+               pmid          4.2
+              arxiv          1.0
+                pmc          0.8
 
-The Average Number Of Days Since A Citation Was Added Is: 855
+The Average Number Of Days Since A Citation Was Added Is: 853
 
 Number Of ArXiv Citations By Year:
         2016    818
@@ -54,17 +54,17 @@ Number Of ArXiv Citations By Year:
 --- Beginning of Medium Extensions ---
 
 Average Citations:
-        Mean:   2.684295273195692
+        Mean:   2.6923011813641913
         Median: 1.0
 
 Number of Citations from Zenodo:
         Sorted by Number of Citations:
-           Year  Number of Zenodo cited
-        0  2016                       2
+         Year  Number of Zenodo cited
+         2016                       2
 
         Sorted by Year of Appearance:
-           Year  Number of Zenodo cited
-        0  2016                       2
+         Year  Number of Zenodo cited
+         2016                       2
 
 The First 10 Pages Citing The Largest Number of Sources Are:
         Фоторецептор
@@ -85,32 +85,32 @@ The First 10 Pages Citing The Largest Number of Sources Are:
 The 10 Most Cited Sources Are:
         DOI 10.1101/gr.2596504    16054
         ISBN 9789851105546         2156
-        ISBN 9789851106369         2155
         ISBN 9789851103023         2155
+        ISBN 9789851106369         2155
         ISBN 9789663352060         1502
         ISBN 9666031159             597
-        ISBN 966                    474
         ISBN 9789662154245          473
         ISBN 9666031787             443
         DOI 10.1038/nbt1240         434
+        ISBN 966316039X             371
 
 The Number and Percentage of Citations Added Per Year:
                Citations  Percentage
         Years
-        2004           2    0.000889
-        2005           6    0.002666
-        2006         105    0.046655
-        2007         642    0.285265
-        2008        1804    0.801585
-        2009        2531    1.124619
-        2010        4240    1.883992
-        2011        8722    3.875514
-        2012       12721    5.652421
-        2013       20097    8.929857
-        2014       15065    6.693949
-        2015       23667   10.516143
-        2016       33940   15.080825
-        2017       92085   40.916847
-        2018        9427    4.188772
+        2004           2    0.000898
+        2005           6    0.002695
+        2006         102    0.045811
+        2007         634    0.284744
+        2008        1783    0.800787
+        2009        2502    1.123707
+        2010        4196    1.884521
+        2011        8574    3.850783
+        2012       12529    5.627066
+        2013       19917    8.945189
+        2014       14898    6.691039
+        2015       23375   10.498257
+        2016       33251   14.933799
+        2017       91553   41.118587
+        2018        9334    4.192117
 
 --- End of Hard Extensions ---

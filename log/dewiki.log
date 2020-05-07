@@ -8,7 +8,7 @@ There are 0 Duplicate Rows in the Data
 
 --- Beginning of Initial Analysis ---
 
-Number of records: 1648868
+Number of records: 1647997
 
 The Range of Dates Represented in the Data:
         Earliest date (ns, UTC): 2001-12-02 17:08:33+00:00
@@ -17,24 +17,24 @@ The Range of Dates Represented in the Data:
         Latest date: 2018-03-02
 
 Records By Type:
-          Record type  Record count
-        0        isbn       1517103
-        1         doi        112299
-        2        pmid         11925
-        3       arxiv          5203
-        4         pmc          2338
+        Record type  Record count
+               isbn       1516233
+                doi        112299
+               pmid         11924
+              arxiv          5203
+                pmc          2338
 
 --- End of Initial Analysis ---
 
 --- Beginning of Easy Extensions ---
 
 Percent of Records for Each Citation Type:
-          Record type Percentage %
-        0        isbn         92.0
-        1         doi          6.8
-        2        pmid          0.7
-        3       arxiv          0.3
-        4         pmc          0.1
+        Record type Percentage %
+               isbn         92.0
+                doi          6.8
+               pmid          0.7
+              arxiv          0.3
+                pmc          0.1
 
 The Average Number Of Days Since A Citation Was Added Is: 2132
 
@@ -60,25 +60,25 @@ Number Of ArXiv Citations By Year:
 --- Beginning of Medium Extensions ---
 
 Average Citations:
-        Mean:   2.885264375418869
+        Mean:   2.884653893414645
         Median: 2.0
 
 Number of Citations from Zenodo:
         Sorted by Number of Citations:
-           Year  Number of Zenodo cited
-        0  2017                      15
-        1  2016                       9
-        2  2015                       9
-        3  2018                       3
-        4  2014                       1
+         Year  Number of Zenodo cited
+         2017                      15
+         2016                       9
+         2015                       9
+         2018                       3
+         2014                       1
 
         Sorted by Year of Appearance:
-           Year  Number of Zenodo cited
-        4  2014                       1
-        2  2015                       9
-        1  2016                       9
-        0  2017                      15
-        3  2018                       3
+         Year  Number of Zenodo cited
+         2014                       1
+         2015                       9
+         2016                       9
+         2017                      15
+         2018                       3
 
 The First 10 Pages Citing The Largest Number of Sources Are:
         R (Programmiersprache)
@@ -112,22 +112,22 @@ The Number and Percentage of Citations Added Per Year:
                Citations  Percentage
         Years
         2001           1    0.000061
-        2002          82    0.004973
-        2003        1231    0.074657
-        2004       13850    0.839970
-        2005       39588    2.400920
-        2006       75921    4.604432
-        2007       95263    5.777479
-        2008      113345    6.874110
-        2009      124900    7.574894
-        2010      140787    8.538403
-        2011      144745    8.778447
-        2012      156267    9.477229
-        2013      147487    8.944743
-        2014      139633    8.468416
-        2015      142590    8.647751
-        2016      139019    8.431178
-        2017      147249    8.930309
-        2018       26910    1.632029
+        2002          82    0.004976
+        2003        1231    0.074697
+        2004       13850    0.840414
+        2005       39580    2.401703
+        2006       75903    4.605773
+        2007       95236    5.778894
+        2008      113308    6.875498
+        2009      124860    7.576470
+        2010      140734    8.539700
+        2011      144694    8.779992
+        2012      156202    9.478294
+        2013      147412    8.944919
+        2014      139559    8.468401
+        2015      142532    8.648802
+        2016      138971    8.432722
+        2017      146986    8.919070
+        2018       26856    1.629615
 
 --- End of Hard Extensions ---
